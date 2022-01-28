@@ -127,9 +127,9 @@ body {
   top: 0;
   width: 100%;
   background-color: transparent;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .header .header__body {
@@ -182,13 +182,17 @@ body {
 
 .header.skroll-bcg {
   background-color: #f0f0f0;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .header.skroll-bcg .header__logo .l-cld {
   color: #000;
+}
+
+.header.skroll-bcg .navigation__list li:hover {
+  text-shadow: 0px 0px 1px #000;
 }
 
 .header.skroll-bcg .navigation__list li .navigation__link {
@@ -263,9 +267,9 @@ body {
   padding: 20px;
   border-radius: 20px;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .wrapper__fullscreen .fullscreen__body .fullscreen__button:hover {
@@ -280,7 +284,7 @@ body {
 
 .about-me .about-me__text {
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
-  line-height: 130%;
+  line-height: normal;
 }
 
 .about-me .about-me__text p {
@@ -291,10 +295,14 @@ body {
   margin: 0px;
 }
 
+.test-text {
+  margin: 0px 0px 70px 0px;
+}
+
 .footer {
   width: 100%;
   background-color: #f0f0f0;
-  padding: 10px 0px;
+  padding: 20px 0px;
 }
 
 .footer .footer__content {
@@ -312,7 +320,7 @@ body {
 }
 
 .footer .footer__content .footer__links .footer__title {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 15px 0px;
 }
 
 .footer .footer__content .footer__links .footer__contacts a {
@@ -371,10 +379,19 @@ body {
   .about-me {
     margin: 0px 0px 35px 0px;
   }
+
+  .test-text {
+    margin: 0px 0px 35px 0px;
+  }
+
+  .footer {
+    padding: 10px 0px;
+  }
 }
 
 @media (max-width: 425px) {
   .footer .footer__content .footer__links .footer__contacts a {
     display: block;
+    margin: 0px 0px 10px 0px;
   }
 }
