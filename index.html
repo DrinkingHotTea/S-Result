@@ -15,7 +15,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Главная страница">
     <meta property="og:description" content="Главная страница проекта S-Result">
-    <meta property="og:image" content="logo-for-share.png">
+    <meta property="og:image" content="img/logo-for-share.png">
     <meta property="og:url" content="ссылка на текущую страницу">
     <meta property="og:site_name" content="S-Result">
 
@@ -23,32 +23,35 @@
     <meta property="twitter:site" content="Andrei">
     <meta property="twitter:title" content="S-Result">
     <meta property="twitter:description" content="Главная страница проекта S-Result">
-    <meta property="twitter:image" content="logo-for-share.png">
+    <meta property="twitter:image" content="img/logo-for-share.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220128173611" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220201000030" rel="stylesheet">
 
-    <link rel="shortcut icon" href="site-icon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220128173611" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?_v=20220128173611">
+    <link rel="shortcut icon" href="img/site-icon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220201000030" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20220201000030">
     <title>Главная</title>
 </head> 
     <body>
         <div class="wrapper">
             <header class="header">
+    <!--<img src="img/gory_derevia_pejzazh.jpg" alt="">-->
+    <!--Как-нибудь заставить текст в бургере менять свой цвет, может с присвоением ещё какого-нибудь класса-->
     <div class="max-width-container">
         <div class="header__body">
+            <div class="header-dark-block"></div>
             <a href="##" class="header__logo" title="На главную">
                 <span class="f-cld">S -</span>
                 <span class="l-cld">Result</span>
             </a>
             <div class="header__navigation">
                 <div class="navigation__icon">
-                    <span></span>
+                    <span class="material-icons">menu</span>
                 </div>
                 <nav class="navigation__menu">
-                    <il class="navigation__list">
+                    <ul class="navigation__list">
                         <li>
                             <a href="##" class="navigation__link">блог</a>
                         </li>
@@ -61,14 +64,19 @@
                         <li>
                             <a href="##" class="navigation__link">пункт</a>
                         </li>
-                    </il>
+                    </ul>
                 </nav>
             </div>
         </div>
     </div>
 </header>
             <div class="content">
-                <section class="wrapper__fullscreen">
+                <div class="top-button" title="Наверх">
+                    <div class="top-button__body">
+                        <span class="material-icons">arrow_upward</span>
+                    </div>
+                </div>
+                <section class="wrapper__fullscreen bottom-margin">
                     <div class="max-width-container fullscreen">
                         <div class="fullscreen__body">
                             <div class="fullscreen__title">welcome</div>
@@ -77,7 +85,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="about-me">
+                <section class="about-me bottom-margin">
                     <div class="max-width-container">
                         <div class="about-me__body">
                             <div class="about-me__title title">Обо мне</div>
@@ -98,52 +106,471 @@
                         </div>
                     </div>
                 </section>
-                <div class="test-text">
+                <!--Тут нужен слайдер-->
+                <section class="projects bottom-margin">
                     <div class="max-width-container">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veritatis blanditiis non cumque, obcaecati natus! Itaque eligendi, 
-                            molestias eius ducimus unde eos atque veniam molestiae perferendis sapiente dignissimos consectetur sit quia corrupti quidem porro cum quaerat soluta! 
-                            Ea quam blanditiis voluptates nostrum, ducimus doloremque iure quae tempore consequatur mollitia fugit, consequuntur vitae, ipsa maiores. 
-                            Reiciendis facere magnam voluptatum fuga impedit nulla voluptate nam? Deserunt ratione excepturi commodi tenetur perspiciatis provident 
-                            inventore doloribus ullam nemo eum, dolorum qui tempora libero voluptate quis, laborum sapiente modi neque. 
-                            Molestiae quibusdam facilis natus dolor exercitationem similique culpa sint libero ad corporis! Sunt ex consequuntur beatae excepturi voluptatibus 
-                            facilis labore odio mollitia doloribus in maiores, repellendus harum, quis fuga reiciendis dolor et. Assumenda fuga aliquam unde reprehenderit numquam 
-                            consectetur aspernatur ut dolores quibusdam magni ullam, maxime animi asperiores odit quidem est consequuntur, saepe voluptas non suscipit at. 
-                            Cum quia blanditiis nisi, non repellat velit distinctio explicabo quas dolorem assumenda perferendis quaerat cumque consequatur exercitationem 
-                            minima accusamus laudantium nam, ipsam dolores voluptate excepturi. Adipisci deserunt ut porro sed autem doloremque quos, ad, 
-                            aut temporibus ex unde culpa excepturi modi maiores odit vitae. Optio dolore minus facere eligendi numquam aliquam eos ad explicabo harum, 
-                            iure, quasi recusandae!
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veritatis blanditiis non cumque, obcaecati natus! Itaque eligendi, 
-                            molestias eius ducimus unde eos atque veniam molestiae perferendis sapiente dignissimos consectetur sit quia corrupti quidem porro cum quaerat soluta! 
-                            Ea quam blanditiis voluptates nostrum, ducimus doloremque iure quae tempore consequatur mollitia fugit, consequuntur vitae, ipsa maiores. 
-                            Reiciendis facere magnam voluptatum fuga impedit nulla voluptate nam? Deserunt ratione excepturi commodi tenetur perspiciatis provident 
-                            inventore doloribus ullam nemo eum, dolorum qui tempora libero voluptate quis, laborum sapiente modi neque. 
-                            Molestiae quibusdam facilis natus dolor exercitationem similique culpa sint libero ad corporis! Sunt ex consequuntur beatae excepturi voluptatibus 
-                            facilis labore odio mollitia doloribus in maiores, repellendus harum, quis fuga reiciendis dolor et. Assumenda fuga aliquam unde reprehenderit numquam 
-                            consectetur aspernatur ut dolores quibusdam magni ullam, maxime animi asperiores odit quidem est consequuntur, saepe voluptas non suscipit at. 
-                            Cum quia blanditiis nisi, non repellat velit distinctio explicabo quas dolorem assumenda perferendis quaerat cumque consequatur exercitationem 
-                            minima accusamus laudantium nam, ipsam dolores voluptate excepturi. Adipisci deserunt ut porro sed autem doloremque quos, ad, 
-                            aut temporibus ex unde culpa excepturi modi maiores odit vitae. Optio dolore minus facere eligendi numquam aliquam eos ad explicabo harum, 
-                            iure, quasi recusandae!
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi veritatis blanditiis non cumque, obcaecati natus! Itaque eligendi, 
-                            molestias eius ducimus unde eos atque veniam molestiae perferendis sapiente dignissimos consectetur sit quia corrupti quidem porro cum quaerat soluta! 
-                            Ea quam blanditiis voluptates nostrum, ducimus doloremque iure quae tempore consequatur mollitia fugit, consequuntur vitae, ipsa maiores. 
-                            Reiciendis facere magnam voluptatum fuga impedit nulla voluptate nam? Deserunt ratione excepturi commodi tenetur perspiciatis provident 
-                            inventore doloribus ullam nemo eum, dolorum qui tempora libero voluptate quis, laborum sapiente modi neque. 
-                            Molestiae quibusdam facilis natus dolor exercitationem similique culpa sint libero ad corporis! Sunt ex consequuntur beatae excepturi voluptatibus 
-                            facilis labore odio mollitia doloribus in maiores, repellendus harum, quis fuga reiciendis dolor et. Assumenda fuga aliquam unde reprehenderit numquam 
-                            consectetur aspernatur ut dolores quibusdam magni ullam, maxime animi asperiores odit quidem est consequuntur, saepe voluptas non suscipit at. 
-                            Cum quia blanditiis nisi, non repellat velit distinctio explicabo quas dolorem assumenda perferendis quaerat cumque consequatur exercitationem 
-                            minima accusamus laudantium nam, ipsam dolores voluptate excepturi. Adipisci deserunt ut porro sed autem doloremque quos, ad, 
-                            aut temporibus ex unde culpa excepturi modi maiores odit vitae. Optio dolore minus facere eligendi numquam aliquam eos ad explicabo harum, 
-                            iure, quasi recusandae!
-                        </p>
+                        <div class="projects__body">
+                            <div class="projects____title title">Все мои проекты</div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Старый блог</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">contact_page</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Страница является первой, старой и очень сырой версией блога, где я пытался на всю проявить знания JS на тот момент. 
+                                            Заходить и ознакомитья, конечно, можно, но некоторый функционал сделан криво и может не соответствовать ожиданиям.
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Старая главная страница</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">home</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Когда-то на её я потратил 5 дней, 1 из которых, можно считать, просто был выброшен. 
+                                            Пусть и сделанная с костылями, но всё же демонстрирующая знания Frontend'а. 
+                                            Очень быстро я начинал узнавать способы как можно было сделать все по-нормальному, поэтому решил, что легче будет начать с начала и в итоге родился этот сайт.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Адаптивные картинки</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">photo_size_select_large</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Практика адаптивных картинок, которые, в итоге, здесь я так и не применил. Страница служит как шпаргалка на будущее.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">"Продвинутый" обратный отсчет</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">av_timer</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Просто банальное применение интервалов и событий, чтоб сделать что-то похожее на обратный отсчет. Создавался на очень раннем этапе изучения JS.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Меню "бургер"</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">lunch_dining</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Практика при изучении способа создания такого меню для мобильных устройств. Оно же используется и на этом сайте.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Нерабочий калькулятор</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">calculate</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Была попытка заставить его работать, но я отложил её до лучших времен, кто знает, может потом займусь, 
+                                            но переделывая всё с нуля, так как даже структура, как я думаю, написана не верно.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Простой обратный отсчёт</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">hourglass_top</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Этот отсчет ещё примитивнее, чем "продвинутый", ибо создавался ещё раньше. Больше сказать нечего ¯\_(ツ)_/¯
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Страница с полноэкранной картинкой</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">fullscreen</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Практика полноэкранных блоков. Почти таких же, как используется в начале здесь и приветствует пользователя.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Игра в гоночки</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">sports_esports</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Появилась как-то раз идея "а что, если сделать гонку со своёй волютой и улучшениями?", немного подумав, решил воплотить её в жизнь. 
+                                            Со второго раза (спустя пол месяца), но результата добился. Этот тот случай, где графика абсолютно не важна, 
+                                            лично мне больше всего нужен и важен код, по которому всё работает.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Сетка GRID-Layout</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">view_module</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Страница, полностью построенная при помощи сетки GRID, применение которой я нашел и на этом сайте. 
+                                            Функционал сложнее, нежели flex, но имеет массу своих преимуществ, поэтому необходим к изучению.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">"Как это сделать?"</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">question_mark</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Всё содержимое этой страницы взято с обучающих роликов канала 
+                                            <a href="https://www.youtube.com/c/FreelancerLifeStyle" class="projects__link-in-text" target="_blank">Фрилансер по жизни</a>.
+                                            Там есть: анимированные кнопки, звездный рейтинг, модальные окна и ещё много чего.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Интерактивные картинки</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">add_photo_alternate</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Всё, что можно тут сделать - это переместить картинки в сайдбар, затем в консоль вызвать массив с этими картинками. 
+                                            Все также создавалось на раннем этапе изучения JS.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Ленивая загрузка</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">pending</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Здесь половину JS кода я и сам не понимаю, суть в реализации подгрузки картинок, когда пользователь доскроллил до них.
+                                            Также есть бесконечная подгрузка контента в конце блока с текстом.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Flex практика</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">view_quilt</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Название говорит само за себя. Небольшая практика по flex, который является неотъемлимой частью каждого сайта.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Параллакс и анимация при скролле</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">auto_awesome_motion</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            И ещё одна страница, JS которой я не полностью понимаю. 
+                                            Тем не менее, она интересная из-за параллакс эффекта, создаваемого при движении курсора.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Генератор паролей</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">password</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Страница может сгенерировать пароль с указанным колличеством цифр. 
+                                            Со временем была усовершенствована и пароли стали генерироваться с буквами.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Скучные интерактивные картинки</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">image</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Ещё меньший функционал, чем у предыдущих картинок. 
+                                            Всё просто: одно нажатие - из сайдбара на страницу, двойное - наоборот.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Слайдер</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">view_carousel</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Здесь страница с подключенным сторонним слайдером, таким же, как используется на этом сайте выше.
+                                            По сути, это напоминание о том, как его использовать и внедрять в другие проекты.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Светофор</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">light_mode</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Достаточно странное место, которое послужило предком для драг игры. 
+                                            Весь фенкционал нужно переделывать для нормальной работы, на то, что есть, можно посмотреть сейчас.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Переходы</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">widgets</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Здесь предствавлены обычные переходы при каких-либо событиях. Всё.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Переходы и анимации</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">animation</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            Здесь также переходы, но ещё присутствует анимация.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects__item">
+                                <div class="projects__this-title">Полноэкранное видео</div>
+                                <div class="projects__content">
+                                    <div class="projects__image">
+                                        <a href="##" class="projects__link">
+                                            <div class="projects__icon-bcg">
+                                                <div class="projects__icon">
+                                                    <span class="material-icons">videocam</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="projects__text-parent">
+                                        <div class="projects__text">
+                                            В начале страницы есть полноэкранных блок с замьюченным и притемненным видео, после которого есть ещё контент.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+                <section class="feedback bottom-margin">
+                    <div class="max-width-container">
+                        <div class="feedback__body">
+                            <div class="feedback__title title">Обратная связь</div>
+                            <div class="feedback__form">
+                                <div class="feedback__text">
+                                    Здесь вы можете указать своё мнение о сайте и предложить что-то своё, указать на ошибки или оценить преимущества.
+                                    (будет работать только тогда, когда я с этим разберусь)
+                                </div>
+                                <form action="##" class="form">
+                                    <textarea class="form__textarea-text"></textarea>
+                                    <div class="form__submit-elements">
+                                        <button type="submit" class="form__button" title="Отправить отзыв">Отправить</button>
+                                        <button class="form__button-clear" title="Очистить текст">Очистить</button>
+                                        <div class="form__info"></div>
+                                    </div>
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
             <footer class="footer">
     <div class="max-width-container">
@@ -162,7 +589,7 @@
     </div>
 </footer>
         </div>
-        <script src="app.min.js?_v=20220128173611"></script>
-        <script src="scripts.js?_v=20220128173611"></script>
+        <script src="js/app.min.js?_v=20220201000030"></script>
+        <script src="js/scripts.js?_v=20220201000030"></script>
     </body>
 </html>
