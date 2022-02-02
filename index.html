@@ -15,7 +15,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Главная страница">
     <meta property="og:description" content="Главная страница проекта S-Result">
-    <meta property="og:image" content="logo-for-share.png">
+    <meta property="og:image" content="img/logo-for-share.png">
     <meta property="og:url" content="ссылка на текущую страницу">
     <meta property="og:site_name" content="S-Result">
 
@@ -23,15 +23,16 @@
     <meta property="twitter:site" content="Andrei">
     <meta property="twitter:title" content="S-Result">
     <meta property="twitter:description" content="Главная страница проекта S-Result">
-    <meta property="twitter:image" content="logo-for-share.png">
+    <meta property="twitter:image" content="img/logo-for-share.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220201000030" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220202231527" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220202231527"/>
     <link rel="shortcut icon" href="img/site-icon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220201000030" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?_v=20220201000030">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220202231527" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20220202231527">
     <title>Главная</title>
 </head> 
     <body>
@@ -106,7 +107,73 @@
                         </div>
                     </div>
                 </section>
-                <!--Тут нужен слайдер-->
+                <section class="project-slider bottom-margin">
+                    <div class="max-width-container">
+                        <div class="project-slider__body">
+                            <div class="project-slider__title title">Быстрый старт</div>
+                            <div class="project-slider__content">
+                                <div class="project-slider__text">
+                                    Ниже находится слайдер с 3-мя рандомными проектами для того, чтобы вы могли быстро начать ознакомление.
+                                </div>
+                                <div class="project-slider__slider swiper">
+                                    <div class="project-slider__wrapper swiper-wrapper">
+                                        <div class="project-slider__slide swiper-slide">
+                                            <div class="triangle-left"></div>
+                                            <div class="slide__body">
+                                                <div class="slide__text-parent">
+                                                    <div class="slide__text"></div>
+                                                </div>
+                                                <div class="slide__button-parent">
+                                                    <a href="##" class="slide__link" target="_blank">
+                                                        <div class="link__content">
+                                                            Перейти
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="triangle-right"></div>
+                                        </div>
+                                        <div class="project-slider__slide swiper-slide">
+                                            <div class="triangle-left"></div>
+                                            <div class="slide__body">
+                                                <div class="slide__text-parent">
+                                                    <div class="slide__text"></div>
+                                                </div>
+                                                <div class="slide__button-parent">
+                                                    <a href="##" class="slide__link" target="_blank">
+                                                        <div class="link__content">
+                                                            Перейти
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="triangle-right"></div>
+                                        </div>
+                                        <div class="project-slider__slide swiper-slide">
+                                            <div class="triangle-left"></div>
+                                            <div class="slide__body">
+                                                <div class="slide__text-parent">
+                                                    <div class="slide__text"></div>
+                                                </div>
+                                                <div class="slide__button-parent">
+                                                    <a href="##" class="slide__link" target="_blank">
+                                                        <div class="link__content">
+                                                            Перейти
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="triangle-right"></div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <section class="projects bottom-margin">
                     <div class="max-width-container">
                         <div class="projects__body">
@@ -115,7 +182,7 @@
                                 <div class="projects__this-title">Старый блог</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../block creator/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">contact_page</span>
@@ -136,7 +203,7 @@
                                 <div class="projects__this-title">Старая главная страница</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../main page/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">home</span>
@@ -157,7 +224,7 @@
                                 <div class="projects__this-title">Адаптивные картинки</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../adaptive images/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">photo_size_select_large</span>
@@ -176,7 +243,7 @@
                                 <div class="projects__this-title">"Продвинутый" обратный отсчет</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../advansed countdown/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">av_timer</span>
@@ -195,7 +262,7 @@
                                 <div class="projects__this-title">Меню "бургер"</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../burger/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">lunch_dining</span>
@@ -214,7 +281,7 @@
                                 <div class="projects__this-title">Нерабочий калькулятор</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../calculator/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">calculate</span>
@@ -234,7 +301,7 @@
                                 <div class="projects__this-title">Простой обратный отсчёт</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../countdown/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">hourglass_top</span>
@@ -253,7 +320,7 @@
                                 <div class="projects__this-title">Страница с полноэкранной картинкой</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../fullscreen/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">fullscreen</span>
@@ -272,7 +339,7 @@
                                 <div class="projects__this-title">Игра в гоночки</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../game/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">sports_esports</span>
@@ -293,7 +360,7 @@
                                 <div class="projects__this-title">Сетка GRID-Layout</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../grid_practice/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">view_module</span>
@@ -313,7 +380,7 @@
                                 <div class="projects__this-title">"Как это сделать?"</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../how_do_that/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">question_mark</span>
@@ -334,7 +401,7 @@
                                 <div class="projects__this-title">Интерактивные картинки</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../interactiveArray/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">add_photo_alternate</span>
@@ -354,7 +421,7 @@
                                 <div class="projects__this-title">Ленивая загрузка</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../lazy-loading/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">pending</span>
@@ -374,7 +441,7 @@
                                 <div class="projects__this-title">Flex практика</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../learn html/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">view_quilt</span>
@@ -393,7 +460,7 @@
                                 <div class="projects__this-title">Параллакс и анимация при скролле</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../parallax + scroll/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">auto_awesome_motion</span>
@@ -413,7 +480,7 @@
                                 <div class="projects__this-title">Генератор паролей</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../password randomaiser/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">password</span>
@@ -433,7 +500,7 @@
                                 <div class="projects__this-title">Скучные интерактивные картинки</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../pictures array/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">image</span>
@@ -453,7 +520,7 @@
                                 <div class="projects__this-title">Слайдер</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../slider/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">view_carousel</span>
@@ -473,7 +540,7 @@
                                 <div class="projects__this-title">Светофор</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../svetofor/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">light_mode</span>
@@ -493,7 +560,7 @@
                                 <div class="projects__this-title">Переходы</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../transition/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">widgets</span>
@@ -512,7 +579,7 @@
                                 <div class="projects__this-title">Переходы и анимации</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../transition and animation/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">animation</span>
@@ -531,7 +598,7 @@
                                 <div class="projects__this-title">Полноэкранное видео</div>
                                 <div class="projects__content">
                                     <div class="projects__image">
-                                        <a href="##" class="projects__link">
+                                        <a href="../../video/index.html" class="projects__link" target="_blank">
                                             <div class="projects__icon-bcg">
                                                 <div class="projects__icon">
                                                     <span class="material-icons">videocam</span>
@@ -565,7 +632,6 @@
                                         <button class="form__button-clear" title="Очистить текст">Очистить</button>
                                         <div class="form__info"></div>
                                     </div>
-                                    
                                 </form>
                             </div>
                         </div>
@@ -589,7 +655,8 @@
     </div>
 </footer>
         </div>
-        <script src="app.min.js?_v=20220201000030"></script>
-        <script src="scripts.js?_v=20220201000030"></script>
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220202231527"></script>
+        <script src="js/app.min.js?_v=20220202231527"></script>
+        <script src="js/scripts.js?_v=20220202231527"></script>
     </body>
 </html>

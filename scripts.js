@@ -18,8 +18,38 @@ const FormTextarea = document.querySelector('.form__textarea-text')
 const submitButton = document.querySelector('.form__button')
 const infoBlock = document.querySelector('.form__info')
 const clearButton = document.querySelector('.form__button-clear')
+const slideSlide = document.querySelectorAll('.slide__body')
+const slideText = document.querySelectorAll('.slide__text')
+const slideButton = document.querySelectorAll('.slide__link')
 
-let controlBoolean = true
+let controlBoolean = true;
+
+const randonSliderLink = [
+    {text: 'Старый блог', src: `../../block creator/index.html`}, 
+    {text: 'Старая главная страница', src: `../../main page/index.html`}, 
+    {text: 'Адаптивные картинки', src: `../../adaptive images/index.html`}, 
+    {text: '"Продвинутый" обратный отсчет', src: `../../advansed countdown/index.html`}, 
+    {text: 'Меню "бургер"', src: `../../burger/index.html`}, 
+    {text: 'Нерабочий калькулятор', src: `../../calculator/index.html`}, 
+    {text: 'Простой обратный отсчёт', src: `../../countdown/index.html`}, 
+    {text: 'Страница с полноэкранной картинкой', src: `../../fullscreen/index.html`}, 
+    {text: 'Игра в гоночки', src: `../../game/index.html`}, 
+    {text: 'Сетка GRID-Layout', src: `../../grid_practice/index.html`}, 
+    {text: '"Как это сделать?"', src: `../../how_do_that/index.html`}, 
+    {text: 'Интерактивные картинки', src: `../../interactiveArray/index.html`}, 
+    {text: 'Ленивая загрузка', src: `../../lazy-loading/index.html`}, 
+    {text: 'Flex практика', src: `../../learn html/index.html`}, 
+    {text: 'Параллакс и анимация при скролле', src: `../../parallax + scroll/index.html`}, 
+    {text: 'Генератор паролей', src: `../../password randomaiser/index.html`}, 
+    {text: 'Скучные интерактивные картинки', src: `../../pictures array/index.html`}, 
+    {text: 'Слайдер', src: `../../slider/index.html`}, 
+    {text: 'Светофор', src: `../../svetofor/index.html`}, 
+    {text: 'Переходы', src: `../../transition/index.html`}, 
+    {text: 'Переходы и анимации', src: `../../transition and animation/index.html`}, 
+    {text: 'Полноэкранное видео', src: `../../video/index.html`}
+];
+
+randomNumbers()
 
 if (isMobile.any()) {
     document.body.classList.add('_mobile')
@@ -44,6 +74,31 @@ clearButton.addEventListener('click', () => {
     FormTextarea.value = ''
 })
 
+new Swiper('.project-slider__slider', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+    },
+    mousewheel: {
+        sensitivity: 1,
+    },
+    loop: true,
+    //spaceBetween: 50,
+    autoplay: {
+        delay: 2500,
+        stopOnLastSlide: false,
+        disableOnInteraction: false,
+    },
+})
+
 function scrollToContent() {
     let fullscreenheight = fullscreenBlock.offsetHeight
     let headerHight = header.offsetHeight
@@ -57,15 +112,19 @@ function headerStyles() {
     if (document.body.classList.contains('_mobile')) {
         if (window.scrollY > 90) {
             header.classList.add('skroll-bcg')
+            navMenu.classList.add('black-links')
         } else {
             header.classList.remove('skroll-bcg')
+            navMenu.classList.remove('black-links')
         }
     } 
     if (document.body.classList.contains('_pc')) {
         if (window.scrollY > 200) {
             header.classList.add('skroll-bcg')
+            navMenu.classList.add('black-links')
         } else {
             header.classList.remove('skroll-bcg')
+            navMenu.classList.remove('black-links')
         }
     }
 }
@@ -94,6 +153,7 @@ function menuButtonFunc() {
     navIcon.classList.toggle('otherIcon')
     document.body.classList.toggle('body-lock')
     headerDarkBlock.classList.toggle('dark-block-modif')
+    navMenu.classList.remove('black-links')
 
     if (navIcon.classList.contains('otherIcon')) {
         navIcon.innerHTML = `<span class="material-icons">close</span>`
@@ -114,6 +174,7 @@ function submitFunc() {
 
         if (FormTextarea.value.length > 0) {
             infoBlock.innerHTML = '<span class="material-icons">sentiment_satisfied_alt</span> Ваш комментарий отправлен'
+            FormTextarea.value = ''
             setTimeout(() => {
                 infoBlock.innerHTML = ''
             }, 1500);
@@ -126,27 +187,36 @@ function submitFunc() {
     }
 }
 
-/*let randomNum1 = Math.floor(Math.random() * 15)
-let randomNum2 = Math.floor(Math.random() * 15)
-let randomNum3 = Math.floor(Math.random() * 15)
+function randomNumbers() {
+    let arrayLength = randonSliderLink.length
 
-if (randomNum1 >= 15) {
-    randomNum1 ++
-} else if (randomNum1 < 0) {
-    randomNum1 --
+    let randomNum1 = Math.floor(Math.random() * (arrayLength * 0.33))
+    let randomNum2 = Math.floor(Math.random() * (arrayLength * 0.33)) + Math.floor(arrayLength * 0.33) + 1
+    let randomNum3 = Math.floor(Math.random() * (arrayLength * 0.33)) + Math.floor(arrayLength * 0.67) + 1 
+
+    if (randomNum3 >= arrayLength) {
+        randomNum3 --
+    }
+
+    const randomTextArray = [
+        randomText1 = randonSliderLink[randomNum1].text,
+        randomText2 = randonSliderLink[randomNum2].text,
+        randomText3 = randonSliderLink[randomNum3].text
+    ]
+
+    const randomSrcArray = [
+        randomSrc1 = randonSliderLink[randomNum1].src,
+        randomSrc2 = randonSliderLink[randomNum2].src,
+        randomSrc3 = randonSliderLink[randomNum3].src
+    ]
+
+    if (slideSlide.length > 0) {
+        for (let i = 0; i < slideSlide.length; i++) {
+            let text = randomTextArray[i]
+            let link = randomSrcArray[i]
+            slideText[i].innerHTML = text
+            slideButton[i].setAttribute('href', link)
+        }
+    }
 }
-
-if (randomNum2 >= 15) {
-    randomNum2 ++
-} else if (randomNum2 < 0) {
-    randomNum2 --
-}
-
-if (randomNum3 >= 15) {
-    randomNum3 ++
-} else if (randomNum3 < 0) {
-    randomNum3 --
-}
-
-console.log(randomNum1, randomNum2, randomNum3)*/
 
