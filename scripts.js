@@ -9,15 +9,16 @@ let isMobile = {
 
 const fullscreenBlock = document.querySelector('.wrapper__fullscreen')
 const header = document.querySelector('.header')
+const headerLogo = document.querySelector('.header__logo')
 const fullscreenButton = document.querySelector('.fullscreen__button')
 const topButton = document.querySelector('.top-button')
 const navMenu = document.querySelector('.navigation__menu')
 const navIcon = document.querySelector('.navigation__icon')
 const headerDarkBlock = document.querySelector('.header-dark-block')
 const FormTextarea = document.querySelector('.form__textarea-text')
-const submitButton = document.querySelector('.form__button')
-const infoBlock = document.querySelector('.form__info')
-const clearButton = document.querySelector('.form__button-clear')
+const submitButton = document.querySelector('.feedback__button')
+const infoBlock = document.querySelector('.feedback__info')
+const clearButton = document.querySelector('.feedback__button-clear')
 const slideSlide = document.querySelectorAll('.slide__body')
 const slideText = document.querySelectorAll('.slide__text')
 const slideButton = document.querySelectorAll('.slide__link')
@@ -113,18 +114,22 @@ function headerStyles() {
         if (window.scrollY > 90) {
             header.classList.add('skroll-bcg')
             navMenu.classList.add('black-links')
+            headerLogo.classList.add('black-links')
         } else {
             header.classList.remove('skroll-bcg')
             navMenu.classList.remove('black-links')
+            headerLogo.classList.remove('black-links')
         }
     } 
     if (document.body.classList.contains('_pc')) {
         if (window.scrollY > 200) {
             header.classList.add('skroll-bcg')
             navMenu.classList.add('black-links')
+            headerLogo.classList.add('black-links')
         } else {
             header.classList.remove('skroll-bcg')
             navMenu.classList.remove('black-links')
+            headerLogo.classList.remove('black-links')
         }
     }
 }
@@ -155,6 +160,10 @@ function menuButtonFunc() {
     headerDarkBlock.classList.toggle('dark-block-modif')
     navMenu.classList.remove('black-links')
 
+    if (header.classList.contains('skroll-bcg')) {
+        headerLogo.classList.toggle('black-links')
+    }
+   
     if (navIcon.classList.contains('otherIcon')) {
         navIcon.innerHTML = `<span class="material-icons">close</span>`
     } else {
