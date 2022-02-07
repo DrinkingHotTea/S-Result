@@ -163,6 +163,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 0px;
 }
 
 .header .header__body .header__logo {
@@ -172,7 +173,7 @@ body {
   -webkit-transition: color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
-  font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(22px + (36 - 22) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .header .header__body .header__logo .f-cld {
@@ -212,7 +213,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
 
 .header .header__body .navigation__menu .navigation__list li {
@@ -236,6 +237,31 @@ body {
 
 .header.skroll-bcg .header__navigation .navigation__icon {
   color: #000;
+}
+
+.header.other-header .header__logo .l-cld {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #000;
+}
+
+.header.other-header .header__logo .l-cld.other-white-links {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+}
+
+.header.other-header .navigation__menu .navigation__list li .navigation__link {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: #000;
+}
+
+.header.other-header .navigation__menu .navigation__list li .navigation__link.other-white-links {
+  color: #fff;
 }
 
 .fullscreen {
@@ -268,7 +294,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 50;
+  z-index: 9;
   cursor: pointer;
   visibility: hidden;
   opacity: 0;
@@ -325,6 +351,7 @@ body {
   text-transform: uppercase;
   font-family: "Dancing Script", cursive;
   color: #fff;
+  letter-spacing: 0.2em;
   font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1200 - 320)));
   margin: 0px 0px 1.2em 0px;
 }
@@ -646,6 +673,7 @@ body {
 @media (max-width: 767px) {
   .header .header__body {
     min-height: 50px;
+    padding: 5px 0px;
   }
 
   .header .header__body .navigation__icon {
@@ -653,6 +681,10 @@ body {
     z-index: 5;
     position: relative;
     cursor: pointer;
+  }
+
+  .header .header__body .navigation__icon span {
+    font-size: calc(30px + (40 - 30) * ((100vw - 320px) / (1200 - 320)));
   }
 
   .header .header__body .navigation__menu {
