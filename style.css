@@ -239,6 +239,12 @@ body {
   color: #000;
 }
 
+.header.other-header {
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
 .header.other-header .header__logo .l-cld {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;

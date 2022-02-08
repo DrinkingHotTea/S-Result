@@ -25,31 +25,6 @@ const slideButton = document.querySelectorAll('.slide__link')
 
 let controlBoolean = true;
 
-const randonSliderLink = [
-    {text: 'Старый блог', src: `../../block creator/index.html`}, 
-    {text: 'Старая главная страница', src: `../../main page/index.html`}, 
-    {text: 'Адаптивные картинки', src: `../../adaptive images/index.html`}, 
-    {text: '"Продвинутый" обратный отсчет', src: `../../advansed countdown/index.html`}, 
-    {text: 'Меню "бургер"', src: `../../burger/index.html`}, 
-    {text: 'Нерабочий калькулятор', src: `../../calculator/index.html`}, 
-    {text: 'Простой обратный отсчёт', src: `../../countdown/index.html`}, 
-    {text: 'Страница с полноэкранной картинкой', src: `../../fullscreen/index.html`}, 
-    {text: 'Игра в гоночки', src: `../../game/index.html`}, 
-    {text: 'Сетка GRID-Layout', src: `../../grid_practice/index.html`}, 
-    {text: '"Как это сделать?"', src: `../../how_do_that/index.html`}, 
-    {text: 'Интерактивные картинки', src: `../../interactiveArray/index.html`}, 
-    {text: 'Ленивая загрузка', src: `../../lazy-loading/index.html`}, 
-    {text: 'Flex практика', src: `../../learn html/index.html`}, 
-    {text: 'Параллакс и анимация при скролле', src: `../../parallax + scroll/index.html`}, 
-    {text: 'Генератор паролей', src: `../../password randomaiser/index.html`}, 
-    {text: 'Скучные интерактивные картинки', src: `../../pictures array/index.html`}, 
-    {text: 'Слайдер', src: `../../slider/index.html`}, 
-    {text: 'Светофор', src: `../../svetofor/index.html`}, 
-    {text: 'Переходы', src: `../../transition/index.html`}, 
-    {text: 'Переходы и анимации', src: `../../transition and animation/index.html`}, 
-    {text: 'Полноэкранное видео', src: `../../video/index.html`}
-];
-
 randomNumbers()
 
 if (isMobile.any()) {
@@ -197,7 +172,10 @@ function submitFunc() {
 }
 
 function randomNumbers() {
-    let arrayLength = randonSliderLink.length
+    const projectsTitle = document.querySelectorAll('.projects__this-title')
+    const projectsLink = document.querySelectorAll('.projects__link')
+
+    let arrayLength = projectsTitle.length
 
     let randomNum1 = Math.floor(Math.random() * (arrayLength * 0.33))
     let randomNum2 = Math.floor(Math.random() * (arrayLength * 0.33)) + Math.floor(arrayLength * 0.33) + 1
@@ -208,15 +186,15 @@ function randomNumbers() {
     }
 
     const randomTextArray = [
-        randomText1 = randonSliderLink[randomNum1].text,
-        randomText2 = randonSliderLink[randomNum2].text,
-        randomText3 = randonSliderLink[randomNum3].text
+        randomText1 = projectsTitle[randomNum1].innerText,
+        randomText2 = projectsTitle[randomNum2].innerText,
+        randomText3 = projectsTitle[randomNum3].innerText,
     ]
 
     const randomSrcArray = [
-        randomSrc1 = randonSliderLink[randomNum1].src,
-        randomSrc2 = randonSliderLink[randomNum2].src,
-        randomSrc3 = randonSliderLink[randomNum3].src
+        randomSrc1 = projectsLink[randomNum1].getAttribute('href'),
+        randomSrc2 = projectsLink[randomNum2].getAttribute('href'),
+        randomSrc3 = projectsLink[randomNum3].getAttribute('href'),
     ]
 
     if (slideSlide.length > 0) {

@@ -27,12 +27,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220207232506" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220208225351" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220207232506"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220208225351"/>
     <link rel="shortcut icon" href="img/site-mini-icon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220207232506" rel="stylesheet">
-    <link rel="stylesheet" href="css/blog-style.css?_v=20220207232506">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220208225351" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog-style.css?_v=20220208225351">
     <title>Блог</title>
 </head> 
 <body>
@@ -41,7 +41,7 @@
     <div class="max-width-container">
         <div class="header__body">
             <div class="header-dark-block"></div>
-            <a href="##" class="header__logo" title="На главную">
+            <a href="index.html" class="header__logo" title="На главную">
                 <span class="f-cld">S -</span>
                 <span class="l-cld">Result</span>
             </a>
@@ -52,10 +52,10 @@
                 <nav class="navigation__menu">
                     <ul class="navigation__list">
                         <li>
-                            <a href="##" class="navigation__link">главная</a>
+                            <a href="index.html" class="navigation__link">главная</a>
                         </li>
                         <li>
-                            <a href="##" class="navigation__link">блог</a>
+                            <a href="blog.html" class="navigation__link">блог</a>
                         </li>
                         <li>
                             <a href="##" class="navigation__link">галерея</a>
@@ -70,13 +70,47 @@
     </div>
 </header>
     <div class="wrapper">
-        <div class="max-width-container">
-            <section class="create-button bottom-margin">
-                <div class="create-button__content">
-                    <button class="create-button__button" title="Создать запись">Создать</button>
+        <div class="content">
+            <section class="start-button bottom-margin">
+                <div class="max-width-container">
+                    <div class="start-button__content">
+                        <button class="start-button__button" title="Создать запись">Создать</button>
+                    </div>
                 </div>
             </section>
-        </div>
+            <section class="records bottom-margin">
+                <div class="max-width-container">
+                    <div class="records__content">
+                        <div class="records__info"></div>
+                        <div class="records__items">
+                            <div class="records__item hidden">
+                                <div class="item__body">
+                                    <div class="item__count"></div>
+                                    <div class="item__parts">
+                                        <div class="item__first-part">
+                                            <div class="item__image">
+                                                <img src="img/gora_vershina_siluet.jpg" alt="">
+                                            </div>
+                                            <div class="item__title">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            </div>
+                                        </div>
+                                        <div class="item__second-part">
+                                            <div class="item__text">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor blanditiis, tempore accusamus praesentium quisquam officiis at, commodi nulla voluptas, voluptates quaerat assumenda pariatur asperiores veritatis tempora modi et! Aliquid, reprehenderit quos ducimus eum maxime possimus! Iure magnam eligendi repellendus nihil iste harum, beatae aspernatur reprehenderit, assumenda officiis ipsum recusandae minima!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item__delete">
+                                        <span class="material-icons" title="Удалить запись">delete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>    
     </div>
     <div class="popup">
         <div class="popup__content">
@@ -89,7 +123,7 @@
                     <div class="popup__picture"></div>
                 </div>
                 <div class="popup__title-block">
-                    <div class="popup__block-name">Дайте название своей записи</div>
+                    <div class="popup__block-name">Дайте название своей записи (макс. N символов)</div>
                     <div class="popup__title">
                         <form action="##" class="form">
                             <input type="text"  class="form__input">
@@ -97,11 +131,17 @@
                     </div>
                 </div>
                 <div class="popup__text-block">
-                    <div class="popup__block-name">А теперь напишите описание</div>
+                    <div class="popup__block-name">А теперь напишите описание (макс. N символов)</div>
                     <div class="popup__text">
                         <form action="##" class="form">
-                            <textarea class="form__textarea" placeholder="Краткое описание"></textarea>
+                            <textarea class="form__textarea" placeholder="Краткое описание (Специально для тебя, поля ввода текста не работают, пока что все заготовлено в документе)"></textarea>
                         </form>
+                    </div>
+                </div>
+                <div class="popup__create-button">
+                    <div class="popup__block-name standart-padd">Учтите, если вы оставили поля пустыми, то будет установлен текст по умолчанию</div>
+                    <div class="create-button-container">
+                        <button class="create-button">Создать</button>
                     </div>
                 </div>
             </div>
@@ -123,8 +163,8 @@
         </div>
     </div>
 </footer>
-    <script src="js/app.min.js?_v=20220207232506"></script>
-    <script src="js/blog-scripts.js?_v=20220207232506"></script>
+    <script src="js/app.min.js?_v=20220208225351"></script>
+    <script src="js/blog-scripts.js?_v=20220208225351"></script>
 </body>
 </html>
 
