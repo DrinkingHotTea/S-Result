@@ -606,9 +606,11 @@ body {
 }
 
 .footer {
+  position: relative;
   width: 100%;
   background-color: #f0f0f0;
   padding: 20px 0px;
+  z-index: 2;
 }
 
 .footer .footer__content {
