@@ -357,7 +357,7 @@ body {
   text-transform: uppercase;
   font-family: "Dancing Script", cursive;
   color: #fff;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.13em;
   font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1200 - 320)));
   margin: 0px 0px 1.2em 0px;
 }
