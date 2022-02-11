@@ -373,8 +373,8 @@ function clearPopupImage() {
     const imgPopupImg = document.querySelector('.img-popup__img > img')
     const popupFileBlock = document.querySelector('.popup-file__block > img')
     setTimeout(() => {
-        popupPicture.setAttribute('src', 'img/empty-image.png')
-        imgPopupImg.setAttribute('src', 'img/empty-image.png')
+        popupPicture.setAttribute('src', 'empty-image.png')
+        imgPopupImg.setAttribute('src', 'empty-image.png')
         popupFileBlock.setAttribute('src', '##')
     }, 300);
 }
