@@ -15,7 +15,7 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="Блог">
     <meta property="og:description" content="Главная страница проекта S-Result">
-    <meta property="og:image" content="logo-for-share.png">
+    <meta property="og:image" content="img/logo-for-share.png">
     <meta property="og:url" content="ссылка на текущую страницу">
     <meta property="og:site_name" content="S-Result">
 
@@ -23,16 +23,16 @@
     <meta property="twitter:site" content="Andrei">
     <meta property="twitter:title" content="S-Result">
     <meta property="twitter:description" content="Блог">
-    <meta property="twitter:image" content="logo-for-share.png">
+    <meta property="twitter:image" content="img/logo-for-share.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220209234935" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220212002251" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220209234935"/>
-    <link rel="shortcut icon" href="site-mini-icon.ico">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220209234935" rel="stylesheet">
-    <link rel="stylesheet" href="blog-style.css?_v=20220209234935">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220212002251"/>
+    <link rel="shortcut icon" href="img/site-mini-icon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220212002251" rel="stylesheet">
+    <link rel="stylesheet" href="css/blog-style.css?_v=20220212002251">
     <title>Блог</title>
 </head> 
 <body>
@@ -41,7 +41,7 @@
     <div class="max-width-container">
         <div class="header__body">
             <div class="header-dark-block"></div>
-            <a href="https://drinkinghottea.github.io/S-Result/" class="header__logo" title="На главную">
+            <a href="index.html" class="header__logo" title="На главную">
                 <span class="f-cld">S -</span>
                 <span class="l-cld">Result</span>
             </a>
@@ -52,10 +52,10 @@
                 <nav class="navigation__menu">
                     <ul class="navigation__list">
                         <li>
-                            <a href="https://drinkinghottea.github.io/S-Result/" class="navigation__link">главная</a>
+                            <a href="index.html" class="navigation__link">главная</a>
                         </li>
                         <li>
-                            <a href="https://drinkinghottea.github.io/S-Result/blog.html" class="navigation__link">блог</a>
+                            <a href="blog.html" class="navigation__link">блог</a>
                         </li>
                         <li>
                             <a href="##" class="navigation__link">галерея</a>
@@ -114,7 +114,7 @@
                                     <div class="item__parts">
                                         <div class="item__first-part">
                                             <div class="item__image">
-                                                <img src="gora_vershina_siluet.jpg" alt="">
+                                                <img src="img/empty-image.png" alt="">
                                             </div>
                                             <div class="item__title">
                                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -145,8 +145,15 @@
                     <span class="material-icons">close</span>
                 </div>
                 <div class="popup__picture-block">
-                    <div class="popup__block-name">Загрузите или выберите изображение</div>
-                    <div class="popup__picture"></div>
+                    <div class="popup__block-name">Выберите изображение</div>
+                    <div class="popup__picture__content">
+                        <div class="picture">
+                            <img src="img/empty-image.png" alt="">
+                        </div>
+                        <div class="picture-new" title="Выбрать картинку">
+                            <span class="material-icons">add_circle_outline</span>                                
+                        </div>
+                    </div>
                 </div>
                 <div class="popup__title-block">
                     <div class="popup__block-name">Дайте название своей записи (макс. <span class="popup__textarea-length"></span> символов)</div>
@@ -173,6 +180,57 @@
             </div>
         </div>
     </div>
+    <div class="img-popup imgPopup-hidden">
+        <div class="img-popup__content">
+            <div class="img-popup__close" title="Закрыть">
+                <span class="material-icons">close</span>
+            </div>
+            <div class="img-popup__actual-img">
+                <div class="img-popup__img">
+                    <img src="img/empty-image.png" alt="">
+                </div>
+            </div>
+            <div class="img-popup__text">
+                Выберите картинку из предложенных или загрузите свою
+            </div>
+            <div class="img-popup__pic-container">
+                <div class="img-popup__content">
+                    <div class="img-popup__body">
+                        <div class="img-popup__item">
+                            <img src="img/doroga_ulitsa_asfalt.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/gora_vershina_siluet.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/gory_holmy_oblaka.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/gory_les_oblaka.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/gory_reka_dolina.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/nochnoj_gorod_zdaniia_arhitektura.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__item">
+                            <img src="img/vozdushnyj_shar_zakat_sumerki.jpg" alt="" loading="lazy">
+                        </div>
+                        <div class="img-popup__file">
+                            <form action="##" class="img-popup__form">
+                                <input type="file" class="popup-file">
+                                <div class="popup-file__block">
+                                    <img src="##" alt="">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
     <div class="max-width-container">
         <div class="footer__content">
@@ -189,8 +247,9 @@
         </div>
     </div>
 </footer>
-    <script src="app.min.js?_v=20220209234935"></script>
-    <script src="blog-scripts.js?_v=20220209234935"></script>
+    <!--<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js?_v=20220212002251"></script>-->
+    <script src="js/app.min.js?_v=20220212002251"></script>
+    <script src="js/blog-scripts.js?_v=20220212002251"></script>
 </body>
 </html>
 

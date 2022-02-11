@@ -22,6 +22,7 @@ const navigationLink = document.querySelectorAll('.navigation__link')
 const lcld = document.querySelector('.l-cld')
 const startButton = document.querySelector('.start-button__button')
 const popup = document.querySelector('.popup')
+const imgPopup = document.querySelector('.img-popup')
 const popupClose = document.querySelector('.popup__close')
 const createButton = document.querySelector('.create-button')
 const recordContent = document.querySelector('.records__content')
@@ -31,6 +32,8 @@ const sidebar = document.querySelector('.sidebar')
 const sidebarItems = document.querySelector('.sidebar__items')
 const sidebarArrow = document.querySelector('.sidebar__arrow')
 const topButton = document.querySelector('.top-button')
+const newImage = document.querySelector('.picture-new')
+//const selectPicture = document.querySelector('.popup__picture__select')
 
 const fixedBody = (window.screen.width - document.body.clientWidth) + 'px'
 
@@ -58,6 +61,8 @@ createButton.addEventListener('click', () => {
     clearTextarea() // Очитска полей ввода после создания записи
     count() 
     dateFunc() // Функция с заданием даты
+    changeRecordPicture() // Функция со вставкой картинки
+    clearPopupImage()
 })
 
 popup.addEventListener('click', secCloseFunc)
@@ -65,6 +70,8 @@ popup.addEventListener('click', secCloseFunc)
 sidebarArrow.addEventListener('click', sidebarFunc)
 
 topButton.addEventListener('click', scrollToTop)
+
+newImage.addEventListener('click', selectNewImage)
 
 // Это тоже
 function menuButtonFunc() {
@@ -110,7 +117,7 @@ function secCloseFunc(e) {
 function count() {
     const recordsItem = document.querySelectorAll('.records__item')
     const countBlocks = document.querySelectorAll('.item__count')
-    const deleteBlock = document.querySelectorAll('.item__delete')
+    const deleteBlock = document.querySelectorAll('.item__delete > span')
     const sidebarItem = document.querySelectorAll('.sidebar__item')
     const sidebarCount = document.querySelectorAll('.sidebar__count')
     if (recordsItem.length > 0) {
@@ -275,7 +282,7 @@ function scrollFromSidebar() {
     }
 }
 
-function sidebarFunc(e) {
+function sidebarFunc() {
     sidebar.classList.toggle('visible-sidebar')
     sidebarArrow.classList.toggle('move-arrow')
     document.body.classList.toggle('body-lock')
@@ -295,4 +302,79 @@ function scrollToTop() {
         inline: "nearest",
         behavior: "smooth",
     })
+}
+
+function selectNewImage() {
+    imgPopup.classList.remove('imgPopup-hidden')
+
+    closeImgPopup()
+    selectPicture()
+    uploadImage()
+}
+
+function closeImgPopup() {
+    const imgPopupCloseButton = document.querySelector('.img-popup__close')
+    imgPopupCloseButton.onclick = () => {
+        imgPopup.classList.add('imgPopup-hidden')
+    }
+
+    imgPopup.onclick = (e) => {
+        if (!e.target.closest('.img-popup__content')) {
+            imgPopup.classList.add('imgPopup-hidden')
+        }
+    }
+}
+
+function selectPicture() {
+    const imgPopupItem = document.querySelectorAll('.img-popup__item')
+    const mainPicture = document.querySelector('.picture')
+    const imgPopupImg = document.querySelector('.img-popup__img')
+    const imgPopupImgItem = document.querySelector('.img-popup__img > img')
+
+    for (let i = 0; i < imgPopupItem.length; i++) {
+        imgPopupItem[i].onclick = () => {
+            const targetPicture = imgPopupItem[i].innerHTML
+            imgPopupImgItem.remove()
+            imgPopupImg.innerHTML = targetPicture
+            mainPicture.innerHTML = targetPicture
+        }
+    }
+}
+
+function changeRecordPicture() {
+    const itemImage = document.querySelectorAll('.item__image')
+    const itemImageItem = document.querySelectorAll('.item__image > img')
+    const popupPicture = document.querySelector('.picture')
+    const imagesLength = itemImage.length - 1
+
+    const pictureForInstall = popupPicture.innerHTML
+    itemImageItem[imagesLength].remove()
+    itemImage[imagesLength].innerHTML = pictureForInstall
+}
+
+function uploadImage() {
+    const popupFile = document.querySelector('.popup-file')
+    popupFile.addEventListener('change', () => {
+        const popupFileBlock = document.querySelector('.popup-file__block > img')
+        const mainPicture = document.querySelector('.picture > img')
+        const imgPopupImgItem = document.querySelector('.img-popup__img > img')
+
+        const selectedFile = popupFile.files[0]
+        let fileUrl = URL.createObjectURL(selectedFile)
+        popupFileBlock.setAttribute('src', fileUrl)
+
+        mainPicture.setAttribute('src', fileUrl)
+        imgPopupImgItem.setAttribute('src', fileUrl)
+    })
+}
+
+function clearPopupImage() {
+    const popupPicture = document.querySelector('.picture > img')
+    const imgPopupImg = document.querySelector('.img-popup__img > img')
+    const popupFileBlock = document.querySelector('.popup-file__block > img')
+    setTimeout(() => {
+        popupPicture.setAttribute('src', 'img/empty-image.png')
+        imgPopupImg.setAttribute('src', 'img/empty-image.png')
+        popupFileBlock.setAttribute('src', '##')
+    }, 300);
 }
