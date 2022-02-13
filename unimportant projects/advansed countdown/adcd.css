@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.inmain {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightblue;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.btncls {
+    margin: 20px;
+}
+
+.count {
+    margin: 20px;
+}
