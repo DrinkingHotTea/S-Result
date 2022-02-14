@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+nav,footer,header,aside {display: block;}
+html,body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/*Конец обнуляющих тегов*/
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullscreen {
+    background-color: #666;
+    display: flex;
+    min-height: 100vh;
+    padding: 20px 0px;
+}
+
+.fullscreen__body {
+    flex: 1 1 auto;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+}
+
+.fullscreen__title {
+    font-size: 50px;
+    margin: 0px 0px 20px 0px;
+}
+
+.fullscreen_bg {
+    background: url(gory_holmy_oblaka_146342_1920x1080.jpg) center / cover no-repeat fixed;
+}
+
+.fullscreen_two {
+    background-color: darksalmon;
+}
+
+.fullscreen__text {
+    font-size: 25px;
+    margin: 0px 0px 20px 0px;
+}
+
+.fullscreen__link {
+    display: inline-block;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    background-color: #77608d;
+    align-self: center;
+    padding: 0px 20px;
+}
+
+.content__body {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 30px 20px;
+}
+
+.content__body p {
+    margin: 0px 0px 20px 0px;
+}
+
+.content__body p:last-child {
+    margin: 0;
+}
+
+.footer {   
+    background-color: #111;
+    text-align: center;
+}
+
+.footer__body {
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 30px 20px;
+}
