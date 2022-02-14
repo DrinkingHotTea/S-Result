@@ -318,7 +318,7 @@ function scrollToTop() {
 }
 
 function selectNewImage() {
-    imgPopup.classList.remove('imgPopup-hidden')
+    imgPopup.classList.add('imgPopup-hidden')
 
     closeImgPopup()
     selectPicture()
@@ -328,12 +328,12 @@ function selectNewImage() {
 function closeImgPopup() {
     const imgPopupCloseButton = document.querySelector('.img-popup__close')
     imgPopupCloseButton.onclick = () => {
-        imgPopup.classList.add('imgPopup-hidden')
+        imgPopup.classList.remove('imgPopup-hidden')
     }
 
     imgPopup.onclick = (e) => {
         if (!e.target.closest('.img-popup__items')) {
-            imgPopup.classList.add('imgPopup-hidden')
+            imgPopup.classList.remove('imgPopup-hidden')
         }
     }
 }
