@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Слайдер Swiper</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="title">Слайдер Swiper</h1>
+        <div class="image-slider swiper"> <!--Главный контейнер слайдера-->
+            <div class="image-slider__wrapper swiper-wrapper"> <!--Обязательная оболочка-->
+                <!--Хеш навигация-->
+                <div data-hash="slide-1" class="image-slider__slide swiper-slide"> <!--Слайды-->
+                    <div class="image-slider__image">
+                        <img data-src="dom_les_gory.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка"> <!--Для подгрузки картинок-->
+                        <div class="swiper-lazy-preloader"></div> <!--Блок с анимацией при загрузке-->
+                    </div>
+                </div>
+                <div data-hash="slide-2" class="image-slider__slide swiper-slide"> 
+                    <div class="image-slider__image">
+                        <img data-src="gora_vershina_siluet.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div> 
+                <div data-hash="slide-3" class="image-slider__slide swiper-slide"> 
+                    <div class="image-slider__image">
+                        <img data-src="gory_les_oblaka.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+                <div data-hash="slide-4" class="image-slider__slide swiper-slide"> 
+                    <div class="image-slider__image">
+                        <img data-src="nochnoj_gorod_doroga_razmetka.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+                <div data-hash="slide-5" class="image-slider__slide swiper-slide"> 
+                    <div class="image-slider__image">
+                        <img data-src="zakat_sumerki_pejzazh.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+                <div data-hash="slide-6" class="image-slider__slide swiper-slide"> 
+                    <div class="image-slider__image">
+                        <img data-src="zdaniia_bashnia_neboskreb.jpg" src="10x10-bacground.png" class="swiper-lazy" alt="Картинка">
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
