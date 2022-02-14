@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    margin-top: 50px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-window__content {
+    border: 10px solid #a52a2a;
+}
+
+.dragrace__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.money {
+    position: absolute;
+    right: 400px;
+    z-index: 3;
+    cursor: default;
+}
+
+.money__content::before {
+    content: "$";
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+}
+
+.buttons__start__button {
+    font-size: 24px;
+    width: 170px;
+    height: 50px;
+    border: 5px solid #a54d2a;
+    border-radius: 10px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.buttons__start__button:hover {
+    background-color: #f0f0f0;
+}
+
+.road__content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    border-bottom: 10px solid #a54d2a;
+}
+
+.road__content>img{
+    width: 100%;
+}
+
+.my-car {
+    position: absolute;
+    left: 10px;
+    bottom: 140px;
+    z-index: 2;
+}
+
+.my-car img{
+    width: 240px;
+    
+}
+
+.opponent-car {
+    position: absolute;
+    left: 10px;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.opponent-car img{
+    width: 240px;
+}
+
+.road__alert {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+}
+
+.road__alert__content {
+    visibility: hidden;
+    padding: 10px;
+    background-color: rgba(82, 82, 82, 0.74);
+    border-radius: 10px;
+}
+
+.update-window__parts__content ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.update-window__parts__content li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.update-window__parts__content img {
+    width: 90%;
+    cursor: help;
+}
+
+.update-window__parts__content img:hover {
+    filter: brightness(0.8);
+}
+
+.update-window__button {
+    width: 100%;
+    padding: 5px 0px;
+    border: 5px solid #a54d2a;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.update-window__button:hover {
+    background-color: #f0f0f0;
+}
