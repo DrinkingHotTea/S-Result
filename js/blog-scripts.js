@@ -34,6 +34,7 @@ const sidebarArrow = document.querySelector('.sidebar__arrow')
 const topButton = document.querySelector('.top-button')
 const newImage = document.querySelector('.picture-new')
 const startButtonClose = document.querySelector('.start-button__close')
+const sidebarInfoClose = document.querySelector('.sidebar-info__close')
 
 const popupContent = document.querySelector('.popup__content')
 
@@ -50,6 +51,11 @@ navIcon.addEventListener('click', menuButtonFunc)
 startButtonClose.addEventListener('click', () => {
     const startButtonInfo = document.querySelector('.start-button__info')
     startButtonInfo.remove()
+})
+
+sidebarInfoClose.addEventListener('click', () => {
+    const sidebarInfo = document.querySelector('.sidebar-info')
+    sidebarInfo.remove()
 })
 
 startButton.addEventListener('click', createFunc)
