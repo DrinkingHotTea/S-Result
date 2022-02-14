@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::before,*::after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+nav,footer,header,aside {display: block;}
+html,body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+img {vertical-align: top;}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/*Конец обнуляющих тегов*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.container {
+    flex: 1 1 auto;
+}
+
+.content {
+    max-width: 900px;
+    min-width: 420px;
+    margin: 0px auto;
+}
+
+.hover__block {
+    margin: 50px 0px;
+}
+
+.hover__block__button {
+    margin: 0px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #87dec8;
+    font-size: 30px;
+    padding: 20px 0px;
+    width: 200px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.hover__block__button:hover {
+    background-color: #e3fdf6;
+    transition: all 0.5s;
+}
+
+.hover__block__button:hover .hidden__block {
+    display: block;
+    opacity: 1;
+    
+}
+
+.hidden__block {
+    display: none;
+    position: absolute;
+    top: 73px;
+    width: 200%;
+    opacity: 0;
+    animation: anim1 1s;
+}
+
+.hidden__block__list {
+    background-color: #f0f0f0;
+    margin: 50px 0px 0px 0px;
+    border-radius: 10px;
+}
+
+.hidden__block__list li {
+    opacity: 0;
+    text-align: center;
+    padding: 13px 0px;
+    margin: 5px 0px;
+    transition: all 0.3s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hidden__block__list a {
+    width: 100%;
+    color: #000;
+}
+
+.hidden__block__list li:hover {
+    background-color: #87dec8;
+}
+
+.hidden__block__list li:nth-child(1) {
+    animation: anim1 1s 0.4s forwards;
+}
+.hidden__block__list li:nth-child(1)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(1):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+.hidden__block__list li:nth-child(2) {
+    animation: anim1 1s 0.45s forwards;
+}
+.hidden__block__list li:nth-child(2)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(2):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+.hidden__block__list li:nth-child(3) {
+    animation: anim1 1s 0.5s forwards;
+}
+.hidden__block__list li:nth-child(3)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(3):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+.hidden__block__list li:nth-child(4) {
+    animation: anim1 1s 0.55s forwards;
+}
+.hidden__block__list li:nth-child(4)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(4):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+.hidden__block__list li:nth-child(5) {
+    animation: anim1 1s 0.6s forwards;
+}
+.hidden__block__list li:nth-child(5)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(5):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+.hidden__block__list li:nth-child(6) {
+    animation: anim1 1s 0.65s forwards;
+}
+.hidden__block__list li:nth-child(6)::after {
+    content: " (^-^*)";
+    font-size: 50%;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    animation: trans2 0.4s;
+}
+.hidden__block__list li:nth-child(6):hover::after {
+    animation: trans1 0.4s forwards;
+}
+
+@keyframes anim1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes trans1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes trans2 {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.footer {
+    background-color: #f0f0f0;
+}
+
+.footer__text {
+    text-align: center;
+    padding: 15px 0px;
+    color: #6d6d6d;
+    font-size: 20px;
+}
