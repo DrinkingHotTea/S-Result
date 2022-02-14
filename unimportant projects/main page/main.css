@@ -1,0 +1,728 @@
+::selection {
+    background-color: #15bb68;
+    color: #fff;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #fff;
+    height: 100%;
+}
+
+.primary {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: #15bb68;
+    z-index: 99;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.sub-header-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    border: 2px solid #fff;
+    margin: 8px 28px 8px 0px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.navigation ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navigation li {
+    font-size: 120%;
+    display: inline-block;
+    list-style: none;
+    margin: 0px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navigation li:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.mail-notif {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 50px;
+    width: 140px;
+}
+
+.notif {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.notif img {
+    width: 35px;
+    height: 35px;
+}
+
+.mail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.mail img {
+    width: 35px;
+    height: 35px;
+}
+
+.avatar img {
+    border-radius: 50%;
+}
+
+/*======================== Header окончен ========================*/
+
+.container {
+    display: flex;
+    justify-content: center;
+    min-width: 485px;
+    flex: 1 1 auto;
+}
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 0px; top:0px;
+    height: 100%;
+    width: 230px;
+    background-color: #f0f0f0;
+    z-index: 10;
+}
+
+.side-area {
+    margin: 110px 11px 10px 11px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-content {
+    width: 100%;
+}
+
+.side-content ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.side-content li {
+    list-style: none;
+    margin: 5px 0px;
+}
+
+.side-content a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 120%;
+    border: 1px solid #15bb68;
+}
+
+.side-content a:hover {
+    background-color: #15bb68;
+    color: #fff;
+}
+
+.side-link-text {
+    padding-left: 10px;
+}
+
+.side-link-text-hidden {
+    visibility: hidden;
+}
+
+#side-link-symbol1::before {
+    content: "\2764";
+}
+
+#side-link-symbol2::before {
+    content: "\2605";
+}
+
+#side-link-symbol3::before {
+    content: "\2601";
+}
+
+#side-link-symbol4::before {
+    content: "\2611";
+}
+
+#side-link-symbol5::before {
+    content: "\262D";
+}
+
+#side-link-symbol6::before {
+    content: "\2691";
+}
+
+/*======================== Sidebar окончен ========================*/
+
+.sidebar-hidden {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    left: 0px; top:0px;
+    height: 100%;
+    width: 230px;
+    background-color: #f0f0f0;
+    z-index: 10;
+}
+
+.sidebar-button-hidden {
+    position: absolute;
+    visibility: hidden;
+    margin-right: 30px;
+}
+
+.sidebar-button-hidden img {
+    width: 35px;
+    height: 35px;
+}
+
+.mail-notif-hidden {
+    position: fixed;
+    right: 10px;
+    top: 97px;
+    visibility: hidden;
+    z-index: 11;
+}
+
+.notif-hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.mail-hidden {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.top-button-hidden {
+    position: absolute;
+    font-size: 120%;
+    visibility: hidden;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.top-button-hidden img {
+    width: 30px;
+    height: 30px;
+}
+
+/*======================== Скрытая часть окончена ========================*/
+
+.top-button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 0px;
+    top: 70px;
+    padding: 40px 0px 0px 0px;
+    width: 140px;
+    height: 100%;
+    color: #5e5e5e;
+    cursor: pointer;
+    visibility: visible;
+    transition: all 0.5s;
+    z-index: 11;
+}
+
+.top-button:hover {
+    background-color: #f0f0f0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 670px;
+    margin-top: 105px;
+    z-index: 1;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 150%;
+    cursor: default;
+}
+
+.welcome-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 200%;
+    color: #15bb68;
+    margin-bottom: 20px;
+}
+
+.tripple-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 660px;
+    margin-top: 50px;
+}
+
+.in-tripple-picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.alert-text {
+    position: absolute;
+    color: red;
+    font-size: 120%;
+    padding: 20px;
+    width: 305px;
+}
+
+.left-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 5px; top: 5px; bottom: 5px;
+    border-radius: 15px 0px 0px 15px;
+    transition: all 0.5s;
+}
+
+.left-button-content::after {
+    content: "\2039";
+    color: #000;
+    font-size: 400%;
+    padding: 0px 10px;
+}
+
+.right-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 5px; top: 5px; bottom: 5px;
+    border-radius: 0px 15px 15px 0px;
+    transition: all 0.5s;
+}
+
+.right-button-content::before {
+    content: "\203A";
+    color: #000;
+    font-size: 400%;
+    padding: 0px 10px;
+}
+
+.left-button:hover,
+.right-button:hover {
+    
+    background-color: #f0f0f0;
+}
+
+.place-for-pictures {
+    max-width: 650px;
+    overflow: hidden;
+    display: flex;
+    border: 5px solid #15bb68;
+    border-radius: 20px;
+    max-height: 300px;
+}
+
+.info-about-pictures {
+    color: #000;
+    font-size: 150%;
+    cursor: default;
+} 
+
+/*======================== Тройные картинки окончены ========================*/
+
+.timer-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.tc-info {
+    width: 100%;
+    font-size: 150%;
+}
+
+.tc-content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.timer {
+    width: 200px;
+    height: 200px;
+    border: 3px solid blue;
+    border-radius: 50%;
+    margin-left: 20px;
+    transition: all 0.3s;
+}
+
+.tmr-trn-off {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.timer:hover {
+    background-color: rgb(235, 235, 255);
+    box-shadow: 0px 0px 10px 0px rgb(57, 57, 255);
+}
+
+.timer-content {
+    position: absolute;
+    font-size: 250%;
+}
+
+.timer-start {
+    position: absolute;
+    bottom: 50px;
+    font-size: 120%;
+}
+
+.clock {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    border: 3px solid orange;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: all 0.3s;
+    cursor: default;
+}
+
+.clock:hover {
+    background-color: rgb(255, 247, 233);
+    box-shadow: 0px 0px 10px 0px rgb(255, 187, 60);
+}
+
+.clock-content {
+    position: absolute;
+    font-size: 250%;
+}
+
+/*======================== Часы и таймер окончены ========================*/
+
+.projects-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.all-pages-title-div {
+    margin-bottom: 20px;
+}
+
+.all-pages-title-span {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-size: 150%;
+    cursor: default;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+.project-name {
+    font-size: 150%;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-banner {
+    height: 161px;
+}
+
+.project-banner img {
+    transition: all 0.2s;
+}
+
+.project-banner img:hover {
+    border: 4px solid #f0f0f0;
+    box-shadow: 0px 0px 10px 4px #15bb68;
+    border-radius: 20px;
+}
+
+.project-banner img{
+    border-radius: 20px;
+}
+
+.project-title {
+    font-size: 120%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 161px;
+    width: 85px;
+    color: #000;
+    box-sizing: border-box;
+    visibility: visible;
+    border: 2px solid #15bb68;
+    border-radius: 20px;
+}
+
+.project-title-text {
+    z-index: 5;
+    writing-mode: vertical-lr;
+    cursor:pointer;
+}
+
+.hidden-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    visibility: hidden;
+    width: 661px;
+    height: 161px;
+    top: -2px; right: -1px; bottom: -2px;
+    color: #000;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #15bb68;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.hidden-title-text{
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+}
+
+.project-title:hover .hidden-title-text {
+    visibility: visible;
+    width: 620px;
+} 
+
+.project-title:hover .project-title-text {
+    color: transparent;
+}
+
+.project-title:hover .hidden-title {
+    top: -2px; right: -1px; bottom: -2px;
+    border: 2px solid #15bb68;
+    box-shadow: 0px 0px 10px 3px #15bb68;
+    visibility: visible;
+}
+
+/*======================== Ссылки на проекты окончены ========================*/
+
+@media (max-width: 1200px) {
+    .sidebar-button-hidden {
+        position: relative;
+        visibility: visible;
+    }
+    .top-button {
+        visibility: hidden;
+    }
+    /*.sidebar {
+        visibility: hidden;
+    }
+    .side-content li {
+        height: 48px;
+    }
+    .side-content a  {
+        flex-direction: column;
+        padding:  0px;
+    }
+    .side-link-text {
+        padding-left: 0px;
+        font-size: 80%;
+    }*/
+    .left-button {
+        background-color: #f0f0f0;
+    }
+    .right-button {
+        background-color: #f0f0f0;
+    }
+    .top-button-hidden{
+        visibility: visible;
+        position: relative;
+    }
+    .mail-notif {
+        margin-right: 30px;
+    }
+    .notif {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 880px) {
+    .header-content {
+        margin: 0px 10px;
+    }
+    .sidebar-button-hidden {
+        margin-right: 10px;
+    }
+    /*.sidebar {
+        top: 70px;
+        width: 100%;
+        height: 67px;
+    }
+    .side-area {
+        margin: 0px 10px;
+        flex-direction: row;
+    }
+    .side-content {
+        width: 100%;
+    }
+    .side-content ul {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .side-link-text {
+        padding: 0px 5px;
+    }
+    .main-content {
+        margin-top: 155px;
+    }*/
+    .navigation li {
+        padding: 10px 5px;
+        
+        font-size: 95%;
+    }
+    .top-button-hidden {
+        padding: 10px 5px;
+        margin: 0px 10px;
+        font-size: 95%;
+    }
+    .logo {
+        border-width: 1px;
+        margin: 9px 9px 9px 0px;
+    }
+    .place-for-pictures a {
+        display: flex;
+        width: 455px;
+        height: 210px;
+    }
+    .all-pics1 img,
+    .all-pics2 img,
+    .all-pics3 img {
+        width: 100%;
+        height: 100%;
+    }
+    .project-title {
+        visibility: hidden;
+        position: absolute;
+    }
+    .project-content {
+        justify-content: center;
+    }
+    .mail-notif {
+        position: absolute;
+        visibility: hidden;
+    }
+    .mail-notif-hidden {
+        visibility: visible;
+    }
+}
+
+.footer {
+    z-index: 12;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+}
+
