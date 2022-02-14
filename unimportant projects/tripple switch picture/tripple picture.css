@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1400px;
+}
+
+.picture_block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.pictures{
+    
+    display: flex;
+    max-width: 800px;
+    min-width: 800px;
+    overflow: hidden;
+}
+
+.switch_div_container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 20px;
+}
+
+.switch {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 5px;
+    border: 2px solid grey;
+}
+
+.switch:hover {
+    background-color: rgb(255, 202, 88);
+    border-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 2px #fff;
+}
+
+.auto-switch {
+    background-color: rgb(255, 202, 88);
+    border-color: rgb(255, 255, 255);
+}
+
