@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #202020;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    min-width: 1300px;
+}
+
+/*.middle-container {
+    white-space: normal;
+}*/
+
+.top-button {
+    position: fixed;
+    background-color: #202020;
+    color: #fff;
+    border: 2px solid #B22222;
+    border-radius: 10px;
+    right: 30px;
+    bottom: 30px;
+    width: 70px;
+    height: 60px;
+    z-index: 3;
+}
+
+.delete-button {
+    position: fixed;
+    background-color: #202020;
+    color: #fff;
+    border: 2px solid #B22222;
+    border-radius: 10px;
+    right: 30px;
+    bottom: 114px;
+    width: 70px;
+    height: 60px;
+    z-index: 3;
+}
+
+.top-button:hover {
+    background-color: #272727;
+    box-shadow: 0px 0px 15px 2px #B22222;
+}
+
+.delete-button:hover{
+    background-color: #272727;
+    box-shadow: 0px 0px 15px 2px #B22222;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background-color: #272727;
+    color: #fff;
+    width: 280px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.little-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background-color: #272727;
+    color: #fff;
+    width: 80px;
+    overflow: auto;
+}
+
+.notes {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+}
+
+.notes > img {
+    margin-bottom: 16px;
+}
+
+.side-top-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-spam-text {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 18px 0px;
+    font-size: 140%;
+}
+
+.side-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 280px;
+    max-height: 560px;
+    
+}
+
+.side-div {
+    display: flex;
+    position: relative;
+    width: 210px;
+    min-height: 24px;
+    margin: 5px 0px;
+    padding: 10px;
+    border: 5px solid #202020;
+    border-radius: 10px;
+    white-space: normal;
+}
+
+.side-div:hover {
+    background-color: #202020;
+    color: #b6b6b6;
+}
+
+.big-side-div {
+    visibility: visible;
+    white-space: normal;
+}
+
+.little-side-div {
+    position: absolute;
+    visibility: hidden;
+    top: 13px;
+    left: 15px;
+}
+
+@media (max-width: 1719px) {
+    .big-side-div {
+        visibility: hidden;
+        width: 40px;
+        word-wrap: normal;
+    }
+
+    .little-side-div {
+        visibility: visible;
+    }
+
+    .side-div {
+        width: 20px;
+        height: 20px;
+    }
+
+    .side-top-content {
+        width: 80px;
+    }
+
+    .side-content {
+        width: 80px;
+    }
+
+    .spam-hr hr {
+        width: 78px;
+    }
+}
+
+.empty-spam {
+    margin-top: 10px;
+    color: #646464;
+}
+
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-div-place {
+    max-width: 1160px;
+    z-index: 1;
+}
+
+.main-button {
+    font-size: 160%;
+    background-color: transparent;
+    border: solid;
+    margin-top: 47px;
+    padding: 10px;
+    border-color: #B22222;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.main-button:hover {
+    box-shadow: 0px 0px 15px 2px #B22222;
+    background-color: #272727;
+}
+
+.new-main-div-style {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 10px;
+    margin: 30px;
+    background-color: #272727;
+    /*white-space: normal;
+    Да, тут пусть тоже будет, мало ли*/
+}
+
+.count-div {
+    position: absolute;
+    margin: 0px 10px;
+}
+
+.count-span {
+    font-size: 160%;
+    padding: 0px 4px;
+    left: 0px;
+    border-radius: 10%;
+    color: #fff;
+}
+
+.main-text-block {
+    display: flex;
+    flex-direction: column;
+    /*white-space: normal;
+    word-wrap:break-word;*/
+}
+
+.inside-picture-block {
+    position: relative;
+    margin: 20px 20px 30px 60px;
+    width: 177px;
+    height: 100px;
+}
+
+.inside-main-text-block-1 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 20px 5px 20px;
+    padding: 10px;
+    color: #fff;
+    white-space: normal;
+    /*word-wrap:break-word;*/
+}
+
+.inside-main-text-block-2 {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 20px 20px 20px;
+    padding: 10px;
+    color: #fff;
+    white-space: normal;
+    /*word-wrap:break-word;
+    Я не знаю, почему иногда перенос строк не работает, может баг, может я что-то не так делаю*/
+}
+
+.picture {
+    margin: 5px;
+    border: 1px solid #B22222;
+}
+
+.new-pictures-div {
+    position: absolute;
+    left: 252px;
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 225px;
+    width: 800px;
+    z-index: 2;
+    background-color: #202020;
+    overflow: auto;
+}
+
+.date-div {
+    position: absolute;
+    bottom: 6px;
+    left: 60px;
+    font-size: 70%;
+    color: #646464;
+}
+
