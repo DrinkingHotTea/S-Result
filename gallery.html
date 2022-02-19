@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Сайт, на котором собраны все мои проекты, сделанные за все последний год изучения web">
+    <meta name="keywords" content="S-Result, main, project, learn, web">
+    <meta name="robots" content="none">
+    <meta name="Author" content="Andrei">
+    <meta name="Copyright" content="No copyright">  
+    <meta name="Address" content="Undefined">
+
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Галерея">
+    <meta property="og:description" content="Главная страница проекта S-Result">
+    <meta property="og:image" content="img/logo-for-share.png">
+    <meta property="og:url" content="ссылка на текущую страницу">
+    <meta property="og:site_name" content="S-Result">
+
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="Andrei">
+    <meta property="twitter:title" content="S-Result">
+    <meta property="twitter:description" content="Галерея">
+    <meta property="twitter:image" content="img/logo-for-share.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Source+Sans+Pro&display=swap&_v=20220219194326" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css?_v=20220219194326"/>
+    <link rel="shortcut icon" href="img/site-mini-icon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&_v=20220219194326" rel="stylesheet">
+    <link rel="stylesheet" href="css/gallery-style.css?_v=20220219194326">
+    <title>Галерея</title>
+</head>
+    <body>
+        <header class="header skroll-bcg">
+    <div class="max-width-container">
+        <div class="header__body">
+            <div class="header-dark-block"></div>
+            <a href="index.html" class="header__logo" title="На главную">
+                <span class="f-cld">S -</span>
+                <span class="l-cld">Result</span>
+            </a>
+            <div class="header__navigation">
+                <div class="navigation__icon">
+                    <span class="material-icons">menu</span>
+                </div>
+                <nav class="navigation__menu">
+                    <ul class="navigation__list">
+                        <li>
+                            <a href="index.html" class="navigation__link">главная</a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="navigation__link">блог</a>
+                        </li>
+                        <li>
+                            <a href="gallery.html" class="navigation__link">галерея</a>
+                        </li>
+                        <li>
+                            <a href="##" class="navigation__link">в будущем</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="wrapper">
+            <div class="content">
+                <div class="top-button" title="Наверх">
+                    <div class="top-button__body">
+                        <span class="material-icons">arrow_upward</span>
+                    </div>
+                </div>
+                <section class="gallery bottom-margin">
+                    <div class="max-width-container">
+                        <div class="gallery__content">
+                            <div class="gallery__body">
+                                <div class="gallery__title title">Галерея</div>
+                                <div class="gallery__info">
+                                    На этой странице собраны все фотографии, которые, как я считаю, хорошо получились. 
+                                    Я разместил их в виде сетки, на подобии инстаграма, чтобы фото было удобнее просматривать. 
+                                    Вы также можете на них нажать, чтобы увеличить.
+                                </div>
+                                <div class="gallery__items">
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20190704_190957.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20190704_191007.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20190715_193356.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20190723_214138.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20200616_214229.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20200809_194127.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20200809_194957.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20200809_202734_1.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20201004_191605.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20201128_122253.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210213_013852.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210325_192041.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210417_202342.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210417_202351.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210417_203045.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210417_203052.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210424_204137.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210515_193240.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210515_193322.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210515_193507.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210607_150412.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210607_204543.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210618_203757.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210619_205945.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210619_210042.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210629_230256.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210629_230617.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210630_215947.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210630_220626.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210702_215335.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210704_221403.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210714_214839.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210803_235441.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210806_202119.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210806_205307.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210810_004348.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210811_000603.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_055256.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_055310.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_055328.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_055756.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_055853.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_060324.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_060411.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210814_061656.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20210902_201346.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220101_170117.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220101_170228.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220101_170305.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220101_170426.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220109_211649.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220111_165234.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery__item">
+                                        <div class="item__content">
+                                            <div class="item__zoom-click" title="Увеличить"></div>
+                                            <div class="item__zoom-block">
+                                                <div class="item__zoom-element">
+                                                    <span class="material-icons">zoom_in</span>
+                                                </div>
+                                            </div>
+                                            <div class="item__image" >
+                                                <img src="img/gallery-images/IMG_20220129_175037.jpg" loading="lazy" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="gallery-popup">
+            <div class="gallery-popup__content">
+                <div class="gallery-popup__body">
+                    <div class="gallery-popup__items">
+                        <div class="gallery-popup__close">
+                            <span class="material-icons" title="Закрыть">close</span>                            
+                        </div>
+                        <div class="gallery-popup__left-arrow">
+                            <span class="material-icons">arrow_back_ios</span>
+                        </div>
+                        <div class="gallery-popup__iamge-block">
+    
+                        </div>
+                        <div class="gallery-popup__right-arrow">
+                            <span class="material-icons">arrow_forward_ios</span>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+    <div class="max-width-container">
+        <div class="footer__content">
+            <div class="footer__links">
+                <div class="footer__title">Мои контакты:</div>
+                <div class="footer__contacts">
+                    <a href="##" class="YT-contact">YouTube</a>
+                    <a href="##" class="VK-contact">VK</a>
+                    <a href="##" class="Rddt-contact">Reddit</a>
+                </div>
+            </div>
+            <div class="footer__year">2022</div>
+            <div class="footer__info">No copyright</div>
+        </div>
+    </div>
+</footer>
+        <script src="js/app.min.js?_v=20220219194326"></script>
+        <script src="js/gallery-scripts.js?_v=20220219194326"></script>
+    </body>
+</html>
