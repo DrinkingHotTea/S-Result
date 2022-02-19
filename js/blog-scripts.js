@@ -13,13 +13,15 @@ if (isMobile.any()) {
     document.body.classList.add('_pc')
 }
 
+// Первые 6 констант тоже копировать
 const navIcon = document.querySelector('.navigation__icon')
 const navMenu = document.querySelector('.navigation__menu')
 const headerDarkBlock = document.querySelector('.header-dark-block')
-const header = document.querySelector('.header')
-const headerLogo = document.querySelector('.header__logo')
 const navigationLink = document.querySelectorAll('.navigation__link')
 const lcld = document.querySelector('.l-cld')
+const header = document.querySelector('.header')
+
+const headerLogo = document.querySelector('.header__logo')
 const startButton = document.querySelector('.start-button__button')
 const popup = document.querySelector('.popup')
 const imgPopup = document.querySelector('.img-popup')
@@ -35,7 +37,6 @@ const topButton = document.querySelector('.top-button')
 const newImage = document.querySelector('.picture-new')
 const startButtonClose = document.querySelector('.start-button__close')
 const sidebarInfoClose = document.querySelector('.sidebar-info__close')
-
 const popupContent = document.querySelector('.popup__content')
 
 count() // Функция с нумированием блоков и событием удаления
@@ -43,9 +44,8 @@ recordsCountCheck() // Проверка количества блоков и п�
 textareaFunc() // Функционал полей ввода текста
 scrollFromSidebar() // События клика в сайдбаре
 
-header.classList.add('other-header')
-
 // Обязательно для копирования
+header.classList.add('other-header')
 navIcon.addEventListener('click', menuButtonFunc)
 
 startButtonClose.addEventListener('click', () => {
@@ -83,6 +83,8 @@ sidebarArrow.addEventListener('click', sidebarFunc)
 topButton.addEventListener('click', scrollToTop)
 
 newImage.addEventListener('click', selectNewImage)
+
+document.addEventListener('scroll', topButttonVisidility)
 
 // Это тоже
 function menuButtonFunc() {
@@ -183,6 +185,10 @@ function createRecord() {
     newItem.classList.add('records__item')
     newItem.insertAdjacentHTML('beforeend', cloneElement)
     recordsItems.append(newItem)
+
+    newItem.scrollIntoView ({
+        block: "center",
+    })
 }
 
 function dateFunc() {
@@ -277,7 +283,6 @@ function scrollFromSidebar() {
         sidebarItem[i].onclick = () => {
             scrollToItem.scrollIntoView ({
                 block: "center",
-                inline: "nearest",
                 behavior: "smooth",
             })
 
@@ -299,10 +304,6 @@ function sidebarFunc() {
     sidebar.classList.toggle('visible-sidebar')
     sidebarArrow.classList.toggle('move-arrow')
     document.body.classList.toggle('body-lock')
-    //if (!e.target.closest('.sidebar__content')) {
-    //    sidebar.classList.remove('visible-sidebar')
-    //    sidebarArrow.classList.remove('move-arrow')
-    //}
 }
 
 function scrollToTop() {
@@ -390,4 +391,14 @@ function clearPopupImage() {
         imgPopupImg.setAttribute('src', 'img/empty-image.png')
         popupFileBlock.setAttribute('src', '##')
     }, 300);
+}
+
+function topButttonVisidility() {
+    let screenheight = document.documentElement.clientHeight
+
+    if (window.scrollY > screenheight) {
+        topButton.classList.add('top-visible')
+    } else {
+        topButton.classList.remove('top-visible')
+    }
 }
