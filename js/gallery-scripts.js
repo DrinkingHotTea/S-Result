@@ -21,7 +21,8 @@ const navigationLink = document.querySelectorAll('.navigation__link')
 const lcld = document.querySelector('.l-cld')
 const header = document.querySelector('.header')
 
-const itemImage = document.querySelectorAll('.item__image')
+const itemImageBlock = document.querySelectorAll('.item__image')
+const itemImage = document.querySelectorAll('.item__image > img')
 const itemZoomClick = document.querySelectorAll('.item__zoom-click')
 const galleryPopup = document.querySelector('.gallery-popup')
 const galleryPopupIamgeBlock = document.querySelector('.gallery-popup__iamge-block')
@@ -30,6 +31,18 @@ const galleryPopupLeftArrow = document.querySelector('.gallery-popup__left-arrow
 const galleryPopupRightArrow = document.querySelector('.gallery-popup__right-arrow')
 const topButton = document.querySelector('.top-button')
 const galleryTitle = document.querySelector('.gallery__title')
+const galleryPopupItems = document.querySelector('.gallery-popup__items')
+
+const lazyImages = document.querySelectorAll('img[data-src]')
+const windowHeight = document.documentElement.clientHeight
+console.log(lazyImages)
+
+let lazyImagesPosition = [] // Собирает все положения сверху каждого объекта
+
+lazyImages.forEach(img => {
+    lazyImagesPosition.push(img.getBoundingClientRect().top + pageYOffset)
+    lazyScrollCheck()
+})
 
 zoomButtonFunc() // Передача изображения в попап
 
@@ -43,7 +56,9 @@ gallerypopupClose.addEventListener('click', gallerypopupRemove)
 
 topButton.addEventListener('click', scrollToTop)
 
-document.addEventListener('scroll', topButttonVisidility)
+window.addEventListener('scroll', lazyScroll)
+
+window.addEventListener('scroll', topButttonVisidility)
 
 // Это тоже
 function menuButtonFunc() {
@@ -64,10 +79,29 @@ function menuButtonFunc() {
     }
 }
 
+function lazyScrollCheck() {
+    let imgIndex = lazyImagesPosition.findIndex(
+        item => pageYOffset > item - windowHeight
+    )
+    if (imgIndex >= 0) {
+        lazyImages[imgIndex].src = lazyImages[imgIndex].dataset.src
+        lazyImages[imgIndex].removeAttribute('data-src')
+        delete lazyImagesPosition[imgIndex]
+    }
+}
+
+function lazyScroll() {
+    if (document.querySelectorAll('img[data-src]').length > 0) {
+        lazyScrollCheck()
+    } 
+}
+
 function zoomButtonFunc() {
     for (let i = 0; i < itemZoomClick.length; i++) {
         itemZoomClick[i].addEventListener('click', () => {
-            galleryPopupIamgeBlock.innerHTML = itemImage[i].innerHTML
+
+            galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
+            galleryPopupSize()
             galleryPopupOpen()
 
             galleryPopupLeftArrow.onclick = () => {
@@ -75,7 +109,16 @@ function zoomButtonFunc() {
                 if (i < 0) {
                     i = itemZoomClick.length - 1
                 }
-                galleryPopupIamgeBlock.innerHTML = itemImage[i].innerHTML
+
+                const imageAttribute = itemImage[i].getAttribute('src')
+                if (imageAttribute == 'img/gallery-images/500x282px.png') {
+                    lazyImages[i].src = lazyImages[i].dataset.src
+                    lazyImages[i].removeAttribute('data-src')
+                    delete lazyImagesPosition[i]
+                }
+
+                galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
+                galleryPopupSize()
             }
 
             galleryPopupRightArrow.onclick = () => {
@@ -83,10 +126,30 @@ function zoomButtonFunc() {
                 if (i > itemZoomClick.length - 1) {
                     i = 0
                 }
-                galleryPopupIamgeBlock.innerHTML = itemImage[i].innerHTML
+
+                const imageAttribute = itemImage[i].getAttribute('src')
+                if (imageAttribute == 'img/gallery-images/500x282px.png') {
+                    lazyImages[i].src = lazyImages[i].dataset.src
+                    lazyImages[i].removeAttribute('data-src')
+                    delete lazyImagesPosition[i]
+                }
+
+                galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
+                galleryPopupSize()
             }
         })
     }
+}
+
+function galleryPopupSize() {
+    galleryPopupItems.style.visibility = 'hidden'
+    setTimeout(() => {
+        const imageWidth = galleryPopupIamgeBlock.querySelector('img').offsetWidth
+        const imageHeight = galleryPopupIamgeBlock.querySelector('img').offsetHeight
+        galleryPopupIamgeBlock.style.width = `${imageWidth}px`
+        galleryPopupIamgeBlock.style.height = `${imageHeight}px`
+        galleryPopupItems.style.visibility = 'visible'
+    }, 100);
 }
 
 function missClosePopup(e) {
@@ -113,6 +176,7 @@ function gallerypopupRemove() {
         document.body.classList.remove('body-lock')
         header.style.paddingRight = ''
         document.body.style.paddingRight = ''
+        galleryPopupItems.style = ''
         zoomButtonFunc()
     }, 300);
 }
