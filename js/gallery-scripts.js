@@ -35,7 +35,6 @@ const galleryPopupItems = document.querySelector('.gallery-popup__items')
 
 const lazyImages = document.querySelectorAll('img[data-src]')
 const windowHeight = document.documentElement.clientHeight
-console.log(lazyImages)
 
 let lazyImagesPosition = [] // Собирает все положения сверху каждого объекта
 
@@ -144,6 +143,10 @@ function zoomButtonFunc() {
 function galleryPopupSize() {
     galleryPopupItems.style.visibility = 'hidden'
     setTimeout(() => {
+	//const imageWidth = galleryPopupIamgeBlock.querySelector('img').offsetWidth
+        //const imageHeight = galleryPopupIamgeBlock.querySelector('img').offsetHeight
+        //galleryPopupIamgeBlock.style.width = `${imageWidth}px`
+        //galleryPopupIamgeBlock.style.height = `${imageHeight}px`
         galleryPopupItems.style.visibility = 'visible'
     }, 150);
 }
