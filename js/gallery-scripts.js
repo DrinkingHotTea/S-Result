@@ -101,7 +101,7 @@ function zoomButtonFunc() {
         itemZoomClick[i].addEventListener('click', () => {
 
             galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
-            galleryPopupSize()
+            //galleryPopupSize()
             galleryPopupOpen()
 
             galleryPopupLeftArrow.onclick = () => {
@@ -118,7 +118,7 @@ function zoomButtonFunc() {
                 }
 
                 galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
-                galleryPopupSize()
+                //galleryPopupSize()
             }
 
             galleryPopupRightArrow.onclick = () => {
@@ -135,7 +135,7 @@ function zoomButtonFunc() {
                 }
 
                 galleryPopupIamgeBlock.innerHTML = itemImageBlock[i].innerHTML
-                galleryPopupSize()
+                //galleryPopupSize()
             }
         })
     }
