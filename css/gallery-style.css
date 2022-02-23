@@ -420,8 +420,11 @@ body {
 .gallery .gallery__content .gallery__body .gallery__items {
   display: -ms-grid;
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  row-gap: 20px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .gallery .gallery__content .gallery__body .gallery__items .gallery__item .item__content {
@@ -544,6 +547,10 @@ body {
   padding: 30px 5px;
   cursor: pointer;
   font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.gallery-popup .gallery-popup__content .gallery-popup__body .gallery-popup__items .gallery-popup__iamge-block {
+  min-height: 150px;
 }
 
 .gallery-popup .gallery-popup__content .gallery-popup__body .gallery-popup__items .gallery-popup__iamge-block img {
