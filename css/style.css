@@ -535,6 +535,10 @@ body {
   text-decoration: underline;
 }
 
+.projects .projects__item .projects__content .projects__text-parent span {
+  white-space: nowrap;
+}
+
 .feedback .feedback__title {
   color: #555ff0;
   font-weight: 600;
