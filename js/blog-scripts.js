@@ -40,7 +40,6 @@ const sidebarInfoClose = document.querySelector('.sidebar-info__close')
 const popupContent = document.querySelector('.popup__content')
 const paramsPictureItem = document.querySelector('.params__picture-item')
 const paramsTitleItem = document.querySelector('.params__title-item')
-//sidebar__text
 
 count() // Функция с нумированием блоков и событием удаления
 recordsCountCheck() // Проверка количества блоков и появление надписи
@@ -198,7 +197,7 @@ function createRecord() {
     recordsItems.append(newItem)
 
     newItem.scrollIntoView ({
-        block: "center",
+        block: "center"
     })
 
     const paramsPictureItem = document.querySelector('.params__picture-item')
@@ -209,6 +208,10 @@ function createRecord() {
     }
     if (paramsTitleItem.classList.contains('_on')) {
         newItem.querySelector('.item__title').classList.add('delete-from-settings')
+    }
+
+    if (paramsPictureItem.classList.contains('_on') && paramsTitleItem.classList.contains('_on')) {
+        newItem.querySelector('.item__second-part').classList.add('mrgn-top')
     }
 }
 
@@ -258,7 +261,7 @@ function textEnter() {
     if (textarea[0].value == '') {
         if (titleField[fieldLength].classList.contains('delete-from-settings')) {
             titleField[fieldLength].textContent = ''
-            sidebarText[fieldLength].textContent = 'запись'
+            sidebarText[fieldLength].textContent = 'Запись'
         } 
         else {
             titleField[fieldLength].textContent = '*Заголовок отсутствует*'
@@ -267,7 +270,7 @@ function textEnter() {
     }
     else {
         if (titleField[fieldLength].classList.contains('delete-from-settings')) {
-            sidebarText[fieldLength].textContent = 'запись'
+            sidebarText[fieldLength].textContent = 'Запись'
             titleField[fieldLength].textContent = ''
         }
         else {
