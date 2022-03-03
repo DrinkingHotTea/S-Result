@@ -38,6 +38,9 @@ const newImage = document.querySelector('.picture-new')
 const startButtonClose = document.querySelector('.start-button__close')
 const sidebarInfoClose = document.querySelector('.sidebar-info__close')
 const popupContent = document.querySelector('.popup__content')
+const paramsPictureItem = document.querySelector('.params__picture-item')
+const paramsTitleItem = document.querySelector('.params__title-item')
+//sidebar__text
 
 count() // Функция с нумированием блоков и событием удаления
 recordsCountCheck() // Проверка количества блоков и появление надписи
@@ -85,6 +88,14 @@ topButton.addEventListener('click', scrollToTop)
 newImage.addEventListener('click', selectNewImage)
 
 document.addEventListener('scroll', topButttonVisidility)
+
+paramsPictureItem.addEventListener('click', () => {
+    paramsPictureItem.classList.toggle('_on')
+})
+
+paramsTitleItem.addEventListener('click', () => {
+    paramsTitleItem.classList.toggle('_on')
+})
 
 // Это тоже
 function menuButtonFunc() {
@@ -189,6 +200,16 @@ function createRecord() {
     newItem.scrollIntoView ({
         block: "center",
     })
+
+    const paramsPictureItem = document.querySelector('.params__picture-item')
+    const paramsTitleItem = document.querySelector('.params__title-item')
+
+    if (paramsPictureItem.classList.contains('_on')) {
+        newItem.querySelector('.item__image').classList.add('delete-from-settings')
+    }
+    if (paramsTitleItem.classList.contains('_on')) {
+        newItem.querySelector('.item__title').classList.add('delete-from-settings')
+    }
 }
 
 function dateFunc() {
@@ -232,18 +253,34 @@ function textEnter() {
     const textField = document.querySelectorAll('.item__text')
     const textarea = document.querySelectorAll('.form__textarea')
     const sidebarText = document.querySelectorAll('.sidebar__text')
-    const titleFieldLength = titleField.length - 1
-
-    titleField[titleFieldLength].innerHTML = textarea[0].value
-    textField[titleFieldLength].innerHTML = textarea[1].value
-    sidebarText[titleFieldLength].innerHTML = textarea[0].value
+    const fieldLength = textField.length - 1
 
     if (textarea[0].value == '') {
-        titleField[titleFieldLength].innerHTML = '*Заголовок отсутствует*'
-        sidebarText[titleFieldLength].innerHTML = '*Заголовок отсутствует*'
+        if (titleField[fieldLength].classList.contains('delete-from-settings')) {
+            titleField[fieldLength].textContent = ''
+            sidebarText[fieldLength].textContent = 'запись'
+        } 
+        else {
+            titleField[fieldLength].textContent = '*Заголовок отсутствует*'
+            sidebarText[fieldLength].textContent = '*Заголовок отсутствует*'
+        }
     }
+    else {
+        if (titleField[fieldLength].classList.contains('delete-from-settings')) {
+            sidebarText[fieldLength].textContent = 'запись'
+            titleField[fieldLength].textContent = ''
+        }
+        else {
+            sidebarText[fieldLength].innerHTML = textarea[0].value
+            titleField[fieldLength].innerHTML = textarea[0].value
+        }
+    }
+
     if (textarea[1].value == '') {
-        textField[titleFieldLength].innerHTML = '*Описание отсутствует*'
+        textField[fieldLength].textContent = '*Описание отсутствует*'
+    }
+    else {
+        textField[fieldLength].innerHTML = textarea[1].value
     }
 }
 

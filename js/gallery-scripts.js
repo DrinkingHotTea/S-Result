@@ -143,10 +143,6 @@ function zoomButtonFunc() {
 function galleryPopupSize() {
     galleryPopupItems.style.visibility = 'hidden'
     setTimeout(() => {
-        //const imageWidth = galleryPopupIamgeBlock.querySelector('img').offsetWidth
-        //const imageHeight = galleryPopupIamgeBlock.querySelector('img').offsetHeight
-        //galleryPopupIamgeBlock.style.width = `${imageWidth}px`
-        //galleryPopupIamgeBlock.style.height = `${imageHeight}px`
         galleryPopupItems.style.visibility = 'visible'
     }, 150);
 }
