@@ -679,6 +679,10 @@ body {
   line-height: normal;
 }
 
+.records .records__content .records__item .item__body .item__parts .item__second-part.mrgn-top {
+  margin-top: -20px;
+}
+
 .records .records__content .records__item .item__body .item__parts .item__date-part {
   font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1200 - 320)));
   color: #6e6e6e;
@@ -808,18 +812,10 @@ body {
   background-color: #fff;
   border-radius: 10px;
   cursor: pointer;
-  opacity: 1;
-  visibility: visible;
 }
 
 .popup .popup__content .popup__items .popup__picture-block .popup__picture__content .picture-new span {
   font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1200 - 320)));
-}
-
-.popup .popup__content .popup__items .popup__picture-block .popup__picture__content .picture-new.close-new-pic-button {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .popup .popup__content .popup__items .popup__block-name {
@@ -1450,6 +1446,10 @@ body {
 
   .records .records__content .records__item .item__body .item__parts .item__first-part .item__image {
     margin: 0px 0px 10px 0px;
+  }
+
+  .records .records__content .records__item .item__body .item__parts .item__second-part.mrgn-top {
+    margin-top: -10px;
   }
 
   .records .records__content .records__item .item__body .item__delete {
