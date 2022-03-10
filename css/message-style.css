@@ -423,7 +423,7 @@ body.body-lock {
 .sidebar .sidebar__content .sidebar__arrow {
   position: fixed;
   top: 100px;
-  left: 20px;
+  left: 5px;
   display: none;
   -webkit-transition: left 0.3s linear 0s;
   -o-transition: left 0.3s linear 0s;
@@ -505,7 +505,7 @@ body.body-lock {
 .sidebar .sidebar__content .sidebar__body .sidebar-info .sidebar-info__body .sidebar-info__text {
   font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1200 - 320)));
   color: #fff;
-  padding: 5px 20px 5px 5px;
+  padding: 5px 25px 5px 5px;
   line-height: normal;
 }
 
@@ -652,7 +652,7 @@ body.body-lock {
 }
 
 .messanger__content .messanger__items .messanger__blocks .people .people-info .people-info__body .people-info__close span {
-  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(18px + (24 - 18) * ((100vw - 320px) / (1200 - 320)));
   cursor: pointer;
   color: #fff;
 }
@@ -711,7 +711,7 @@ body.body-lock {
 }
 
 .messanger__content .messanger__items .messanger__blocks .people .people__content .people__item .people__button span {
-  font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(24px + (26 - 24) * ((100vw - 320px) / (1200 - 320)));
   cursor: pointer;
   color: #fff;
 }
@@ -850,7 +850,7 @@ body.body-lock {
   }
 
   .sidebar .sidebar__content .sidebar__arrow {
-    top: 70px;
+    top: 55px;
   }
 
   .sidebar .sidebar__content .sidebar__arrow.move-arrow {
