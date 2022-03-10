@@ -104,7 +104,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-.wrapper {
+body .wrapper {
   min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,11 +115,15 @@ body {
           flex-direction: column;
 }
 
-.content {
+body .wrapper .content {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin-top: 70px;
+}
+
+body.body-lock {
+  overflow: hidden;
 }
 
 .header-dark-block {
@@ -283,10 +287,6 @@ body {
 
 .bottom-margin {
   margin: 0px 0px 80px 0px;
-}
-
-.body-lock {
-  overflow: hidden;
 }
 
 .max-width-container {
@@ -590,7 +590,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .content {
+  body .wrapper .content {
     margin-top: 50px;
   }
 
