@@ -658,7 +658,8 @@ body.body-lock {
 }
 
 .messanger__content .messanger__items .messanger__blocks .people .people-info .people-info__body .people-info__text {
-  font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1200 - 320)));
+  line-height: normal;
   color: #fff;
   padding: 10px 40px 10px 10px;
   line-height: normal;
@@ -734,7 +735,7 @@ body.body-lock {
 
 .messanger__content .messanger__items .messanger__blocks .message {
   display: none;
-  background-color: aqua;
+  background-color: #77ffff;
   height: 200px;
 }
 
