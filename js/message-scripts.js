@@ -161,6 +161,10 @@ function nameFunc() {
 }
 
 function scrollToTop() {
+    sidebar.classList.remove('visible-sidebar')
+    sidebarArrow.classList.remove('move-arrow')
+    document.body.classList.remove('body-lock')
+    
     messangerTabs.scrollIntoView({
         block: "end",
         behavior: "smooth",
