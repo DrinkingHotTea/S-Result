@@ -113,6 +113,7 @@ body .wrapper {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 body .wrapper .content {
@@ -658,7 +659,7 @@ body.body-lock {
 }
 
 .messanger__content .messanger__items .messanger__blocks .people .people-info .people-info__body .people-info__text {
-  font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1200 - 320)));
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
   line-height: normal;
   color: #fff;
   padding: 10px 40px 10px 10px;
@@ -735,8 +736,187 @@ body.body-lock {
 
 .messanger__content .messanger__items .messanger__blocks .message {
   display: none;
-  background-color: #77ffff;
-  height: 200px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__info .info__body {
+  padding: 40px 20px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__info .info__body .info__text {
+  font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1200 - 320)));
+  text-align: center;
+  color: #adadad;
+  cursor: default;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content {
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__friend-name .friend-name__body {
+  margin: 0px 0px 30px 0px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__friend-name .friend-name__body .friend-name__text {
+  text-align: center;
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
+  color: #555ff0;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field {
+  height: 100%;
+  overflow: auto;
+  margin: 0px 0px 10px 0px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+  line-height: normal;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__my-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0px 0px 20px 0px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__my-message .my-message__body {
+  max-width: 65%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #8a92ff;
+  color: #fff;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__my-message.hidden {
+  display: none;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__friend-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0px 0px 20px 0px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__friend-message .friend-message__body {
+  max-width: 65%;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__field .message__friend-message.hidden {
+  display: none;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__alert {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  left: 0;
+  bottom: 100px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__alert .alert__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffe77d;
+  padding: 5px 10px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+  border-radius: 5px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__alert .alert__body span {
+  margin: 0px 0px 0px 10px;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__alert.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__textarea {
+  width: 100%;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__textarea form textarea {
+  resize: none;
+  width: 100%;
+  border: 2px solid #555ff0;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #555ff0;
+  font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1200 - 320)));
+  cursor: pointer;
+  margin: 0px 0px 0px 15px;
+  -webkit-box-shadow: 0px 0px 4px 0px #555ff0;
+          box-shadow: 0px 0px 4px 0px #555ff0;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__instruments .instruments__body .instruments__button:hover {
+  background-color: #3d49e9;
+  -webkit-box-shadow: 0px 0px 5px 0px #3d49e9;
+          box-shadow: 0px 0px 5px 0px #3d49e9;
+}
+
+.messanger__content .messanger__items .messanger__blocks .message .message__content .message__item.hidden {
+  display: none;
 }
 
 .messanger__content .messanger__items .messanger__blocks .message.visible {
@@ -875,6 +1055,10 @@ body.body-lock {
 
   .messanger__content .messanger__items .messanger__blocks .people .people__content .people__item .people__photo {
     width: 50px;
+  }
+
+  .messanger__content .messanger__items .messanger__blocks .message .message__content .message__item .message__friend-name .friend-name__body {
+    margin: 0px 0px 15px 0px;
   }
 }
 
