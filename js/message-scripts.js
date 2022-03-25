@@ -19,10 +19,6 @@ if (document.body.classList.contains('_mobile')) {
         e.classList.add('mobile-visible')
     })
 } 
-else {
-    const messageField = document.querySelector('.message__field')
-    messageField.style.paddingRight = '10px'
-}
 
 // Первые 6 констант тоже копировать
 const navIcon = document.querySelector('.navigation__icon')
@@ -60,7 +56,8 @@ const myMessageForCopy = myMessage.innerHTML
 const friendMessageForCopy = friendMessage.innerHTML
 
 let tempBoolean = true
-let secBoolean = true
+let secBoolean = false
+let trdBoolean = 1
 
 const namesArray = [
     'Александр', 'Алексей', 'Анатолий', 'Андрей', 'Антон', 'Артём', 'Артур', 'Борис', 'Вадим', 'Василий', 'Виктор', 'Виталий', 'Владимир', 'Владислав', 'Вячеслав', 
@@ -89,7 +86,17 @@ navIcon.addEventListener('click', menuButtonFunc)
 
 peopleLink.addEventListener('click', openFriends)
 
-messageLink.addEventListener('click', openMessanger)
+messageLink.addEventListener('click', () => {
+    openMessanger()
+    const messageItem = document.querySelectorAll('.message__item')
+    if (secBoolean) {
+        messageItem.forEach(e => {
+            e.classList.add('hidden')
+        })
+        messageItem[trdBoolean].classList.remove('hidden')
+        sendMessage()
+    }
+})
 
 peopleInfoClose.addEventListener('click', () => {
     const peopleInfo = document.querySelector('.people-info')
@@ -180,16 +187,9 @@ function addFriendsFunc() {
 
                 nameForChenge.innerHTML = name
                 messageNameForChenge.innerHTML = name
-                friendsClickFunc()
 
-                if (secBoolean) {
-                    const messageItem = document.querySelectorAll('.message__item')
-                    messageItem.forEach(e => {
-                        e.classList.add('hidden')
-                    })
-                    messageItem[1].classList.remove('hidden')
-                    secBoolean = false
-                }
+                friendsClickFunc()
+                secBoolean = true
 
                 const messageInfo = document.querySelector('.message__info')
                 messageInfo.style.display = 'none'
@@ -261,6 +261,7 @@ function friendsClickFunc() {
                 sidebarArrow.classList.remove('move-arrow')
             }
             document.body.classList.remove('body-lock')
+            trdBoolean = i
         }
     }
 }
@@ -311,7 +312,8 @@ function sendMessage() {
 
                 let scrollToLast = thisField.scrollHeight
                 thisField.scrollTo({
-                    top: scrollToLast
+                    top: scrollToLast,
+                    behavior: 'smooth'
                 })
 
                 setTimeout(() => {
@@ -323,13 +325,17 @@ function sendMessage() {
 }
 
 function messageAnswer(thisField) {
-    let randomFriendNumber = Math.floor(Math.random() * (answerArray.length - 1))
-    thisField.insertAdjacentHTML('beforeend', friendMessageForCopy)
-    const lastFriendMessage = thisField.querySelectorAll('.friend-message__text')
-    lastFriendMessage[lastFriendMessage.length - 1].textContent = answerArray[randomFriendNumber]
-
-    let scrollToLast = thisField.scrollHeight
-    thisField.scrollTo({
-        top: scrollToLast
-    })
+    let sendChance = Math.round(Math.random() * 2)
+    if (sendChance > 0) {
+        let randomFriendNumber = Math.floor(Math.random() * (answerArray.length - 1))
+        thisField.insertAdjacentHTML('beforeend', friendMessageForCopy)
+        const lastFriendMessage = thisField.querySelectorAll('.friend-message__text')
+        lastFriendMessage[lastFriendMessage.length - 1].textContent = answerArray[randomFriendNumber]
+    
+        let scrollToLast = thisField.scrollHeight
+        thisField.scrollTo({
+            top: scrollToLast,
+            behavior: 'smooth'
+        })
+    }
 }
