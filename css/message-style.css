@@ -778,6 +778,7 @@ body.body-lock {
   height: 100%;
   overflow: auto;
   margin: 0px 0px 10px 0px;
+  padding: 0px 15px 0px 0px;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
   line-height: normal;
 }

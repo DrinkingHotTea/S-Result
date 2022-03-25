@@ -566,6 +566,13 @@ body.body-lock {
 }
 
 .feedback .feedback__form .form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0px 0px 20px 0px;
 }
 
@@ -577,6 +584,33 @@ body.body-lock {
   resize: none;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
   padding: 10px;
+}
+
+.feedback .feedback__form .form .feedback__info {
+  position: absolute;
+  bottom: 0;
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffe77d;
+  border-radius: 10px;
+  cursor: default;
+  display: none;
+  z-index: 6;
+}
+
+.feedback .feedback__form .form .feedback__info.visible-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feedback .feedback__form .form .feedback__info.visible-info span {
+  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+  margin: 0px 5px 0px 0px;
 }
 
 .feedback .feedback__form .feedback__submit-elements {
@@ -603,30 +637,6 @@ body.body-lock {
 .feedback .feedback__form .feedback__submit-elements .feedback__button:hover,
 .feedback .feedback__form .feedback__submit-elements .feedback__button-clear:hover {
   background-color: #4a53cc;
-}
-
-.feedback .feedback__form .feedback__submit-elements .feedback__info {
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
-  padding: 10px;
-  background-color: #ffe77d;
-  border-radius: 10px;
-  cursor: default;
-  display: none;
-  z-index: 6;
-}
-
-.feedback .feedback__form .feedback__submit-elements .feedback__info.visible-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.feedback .feedback__form .feedback__submit-elements .feedback__info.visible-info span {
-  font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
-  margin: 0px 5px 0px 0px;
 }
 
 .footer {
